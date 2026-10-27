@@ -12,7 +12,7 @@ npm run serve      # python3 -m http.server 8080 -> http://localhost:8080
 `app.js` is committed so the site also works without a build step.
 
 ## Things to edit
-- `CONTACT_EMAIL` in `app.ts`: empty on purpose (no public email was verified). Set it to enable the `mailto:` button.
+- `CONTACT_EMAIL` in `app.ts` is now set to the verified professional email for the `mailto:` button.
 - CV: the section is a placeholder with no download. Add a real PDF link only when the file exists.
 - Fonts: Aspekta/Inter Tight are used only if installed locally; otherwise system sans-serif and monospace stacks apply (no network requests).
 - `og:image` is not set: it needs an absolute URL once the site is deployed.

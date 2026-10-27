@@ -29,7 +29,7 @@
 
   /* ---------- Constants (edit here) ---------- */
   const STORAGE_KEY = 'portfolio-lang';
-  const CONTACT_EMAIL = ''; // Set a verified address to enable the mailto link.
+  const CONTACT_EMAIL = 'michaelacostadev@gmail.com';
   const GITHUB = 'https://github.com/MichaelAcostaDev';
   const LINKEDIN = 'https://www.linkedin.com/in/michael-acosta-dev/';
   const SECTION_IDS = ['top', 'about', 'projects', 'cases', 'stack', 'approach', 'cv', 'contact'];
@@ -301,25 +301,25 @@
   const PROJECTS: Project[] = [
     {
       id: 'twistora', name: 'Twistora', repo: 'https://github.com/MichaelAcostaDev/Twistora',
-      demo: 'https://twistora.michaelacostafreelancer.workers.dev/', image: 'assets/twistora.jpg', width: 1200, height: 675,
+      demo: 'https://twistora.michaelacostafreelancer.workers.dev/', image: 'img/twistora.jpg', width: 1200, height: 675,
       tech: ['TypeScript', 'Three.js', 'HTML5', 'CSS3', 'Vitest', 'Cloudflare Workers', 'Docker'],
       evidence: 'config', flow: ['TypeScript (src/)', 'tsc + build-static.mjs', 'dist/ static site', 'Cloudflare Worker (assets)']
     },
     {
       id: 'diabetes', name: 'Diabetes Insight', repo: 'https://github.com/MichaelAcostaDev/diabetes-prediction-ml',
-      demo: null, image: null, width: 0, height: 0,
+      demo: 'https://ml-diabetes-predictor.vercel.app/', image: null, width: 0, height: 0,
       tech: ['Python', 'Flask', 'Scikit-learn', 'pandas', 'joblib', 'JavaScript'],
       evidence: 'source', flow: ['Form (CSV headers)', 'POST /predict', 'validate_inputs()', 'StandardScaler', 'SVC (linear kernel)', 'Label + confidence']
     },
     {
       id: 'devwebcamp', name: 'DevWebCamp', repo: 'https://github.com/MichaelAcostaDev/DevWebCamp',
-      demo: null, image: 'assets/devwebcamp.jpg', width: 1200, height: 675,
+      demo: 'https://devwebcamp-michaelacostadev.mnz.dom.my.id/', image: 'img/devwebcamp.jpg', width: 1200, height: 675,
       tech: ['PHP 8', 'MySQL', 'MVC', 'Composer', 'Sass', 'Gulp', 'JavaScript', 'Chart.js', 'Leaflet', 'PayPal SDK'],
       evidence: 'source', flow: ['public/index.php', 'Router (GET / POST)', 'Controller', 'Model · MySQL', 'View + layout']
     },
     {
       id: 'interest', name: 'Interest Calculator', repo: 'https://github.com/MichaelAcostaDev/Interest-Calculator',
-      demo: null, image: 'assets/interest.jpg', width: 1132, height: 863,
+      demo: 'https://michaelinterestcalculator.netlify.app/', image: 'img/interest.jpg', width: 1132, height: 863,
       tech: ['TypeScript', 'Tailwind CSS', 'Intl API', 'Canvas', 'HTML5'],
       evidence: 'source', flow: ['Form inputs', 'readInput()', 'calculate()', 'GrowthPoint[]', 'Cards · chart · table']
     }
@@ -483,6 +483,7 @@
     PROJECTS.forEach((project, index) => {
       const key = (field: string): string => t(`p.${project.id}.${field}`);
       const card = h('article', 'card project');
+      card.dataset.reveal = 'true';
       const media = h('div', 'project__media');
       if (project.image) {
         const img = h('img');
@@ -616,6 +617,27 @@
     }
   }
 
+  function wireReveal(): void {
+    document.querySelectorAll<HTMLElement>('section, .tab, .group, .step, .detail').forEach((node) => {
+      if (!node.dataset.reveal) node.dataset.reveal = 'true';
+    });
+    const targets = document.querySelectorAll<HTMLElement>('[data-reveal]');
+    if (!targets.length) return;
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach((node) => node.classList.add('is-visible'));
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach((node) => observer.observe(node));
+  }
+
   function renderAll(): void {
     applyStatic();
     renderProjects();
@@ -623,6 +645,7 @@
     renderStack();
     renderApproach();
     renderContact();
+    wireReveal();
   }
 
   function setLanguage(next: Lang): void {
