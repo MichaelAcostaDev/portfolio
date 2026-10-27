@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Acosta — Full-stack developer portfolio</title>
+  <meta name="description" content="Portfolio of Michael Acosta: full-stack projects in PHP MVC, TypeScript, Flask machine learning and interactive software, with source-verified case studies.">
+  <meta name="theme-color" content="#222f30">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Michael Acosta — Full-stack developer portfolio">
+  <meta property="og:description" content="Portfolio of Michael Acosta: full-stack projects in PHP MVC, TypeScript, Flask machine learning and interactive software, with source-verified case studies.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23222f30'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23cef79e'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="topbar section--dark">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="Michael Acosta">MA<span class="dot"></span></a>
+      <nav class="nav" data-i18n-aria="nav.aria" aria-label="Main navigation">
+        <a data-nav="about" href="#about" data-i18n="nav.about">About</a>
+        <a data-nav="projects" href="#projects" data-i18n="nav.projects">Projects</a>
+        <a data-nav="cases" href="#cases" data-i18n="nav.cases">Case studies</a>
+        <a data-nav="stack" href="#stack" data-i18n="nav.stack">Stack</a>
+        <a data-nav="approach" href="#approach" data-i18n="nav.approach">Approach</a>
+        <a data-nav="cv" href="#cv" data-i18n="nav.cv">CV</a>
+        <a data-nav="contact" href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang" role="group" data-i18n-aria="lang.aria" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="section section--dark grid-bg hero">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="tag"><span class="dot"></span><span data-i18n="hero.kicker">Full-stack developer</span></p>
+          <h1 class="display">Michael Acosta.</h1>
+          <p class="statement" data-i18n="hero.statement">Building practical software through structured engineering, thoughtful interfaces, and problem-solving.</p>
+          <p class="muted" data-i18n="hero.desc">I build traditional full-stack applications, data-driven systems and interactive software. The work below is documented from its source code.</p>
+          <div class="actions">
+            <a class="btn btn--solid" href="#projects" data-i18n="hero.cta1">Explore Projects</a>
+            <a class="btn btn--ghost" href="#contact" data-i18n="hero.cta2">Contact Me</a>
+          </div>
+          <p class="profiles">
+            <span class="meta" data-i18n="hero.links">Profiles</span>
+            <a class="link" data-profile="github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="link" data-profile="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </p>
+        </div>
+        <figure class="hero__visual">
+          <svg viewBox="0 0 400 400" role="img" data-i18n-aria="hero.diagram" aria-label="Conceptual layer map: interface, logic, server and data">
+            <g class="bp">
+              <path d="M24 24v352M18 24h12M18 376h12" class="bp__dim"/>
+              <rect x="64" y="24" width="288" height="64" rx="8"/>
+              <rect x="64" y="124" width="288" height="64" rx="8"/>
+              <rect x="64" y="224" width="288" height="64" rx="8"/>
+              <rect x="64" y="324" width="288" height="52" rx="8"/>
+              <path d="M208 88v36M204 118l4 6l4 -6M208 188v36M204 218l4 6l4 -6M208 288v36M204 318l4 6l4 -6" class="bp__edge"/>
+              <circle cx="352" cy="24" r="3" class="bp__dot"/>
+            </g>
+            <g class="bp__text">
+              <text x="80" y="62"><tspan class="bp__num">01 </tspan><tspan data-i18n="hero.d.interface">INTERFACE</tspan></text>
+              <text x="80" y="162"><tspan class="bp__num">02 </tspan><tspan data-i18n="hero.d.logic">LOGIC</tspan></text>
+              <text x="80" y="262"><tspan class="bp__num">03 </tspan><tspan data-i18n="hero.d.server">SERVER</tspan></text>
+              <text x="80" y="354"><tspan class="bp__num">04 </tspan><tspan data-i18n="hero.d.data">DATA</tspan></text>
+              <text x="320" y="62" class="bp__coord">A1</text>
+              <text x="320" y="162" class="bp__coord">B1</text>
+              <text x="320" y="262" class="bp__coord">C1</text>
+              <text x="320" y="354" class="bp__coord">D1</text>
+            </g>
+          </svg>
+          <figcaption class="meta" data-i18n="hero.d.note">Conceptual layer map, not a specific project</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="section section--dark" aria-labelledby="about-title">
+      <div class="wrap split">
+        <div>
+          <p class="counter">01 / 06</p>
+          <h2 id="about-title" class="heading" data-i18n="about.title">Practical software, built end to end.</h2>
+        </div>
+        <div class="prose">
+          <p data-i18n="about.p1">My public repositories cover PHP MVC applications, TypeScript interfaces, a Flask machine-learning app and browser games.</p>
+          <p data-i18n="about.p2">I like turning a narrow problem into a complete experience: a calculator that explains its formulas, a router that keeps responsibilities apart, a form that validates before it predicts.</p>
+          <p class="muted" data-i18n="about.p3">Everything on this page is traced to a repository. Anything I could not verify is marked as such.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section--light" aria-labelledby="projects-title">
+      <div class="wrap">
+        <p class="counter">02 / 06</p>
+        <h2 id="projects-title" class="heading" data-i18n="projects.title">Selected projects</h2>
+        <p class="intro" data-i18n="projects.intro">Four projects chosen for range.</p>
+        <div id="project-list" class="stack-list"></div>
+        <noscript><p>JavaScript is required to display the project list.</p></noscript>
+      </div>
+    </section>
+
+    <section id="cases" class="section section--dark grid-bg" aria-labelledby="cases-title">
+      <div class="wrap">
+        <p class="counter">03 / 06</p>
+        <h2 id="cases-title" class="heading" data-i18n="cases.title">Case studies</h2>
+        <p class="intro" data-i18n="cases.intro">Condensed case studies.</p>
+        <div id="case-tabs" class="tabs" role="tablist" data-i18n-aria="cases.aria" aria-label="Case study projects"></div>
+        <div id="case-panel" class="case" role="tabpanel" tabindex="0"></div>
+      </div>
+    </section>
+
+    <section id="stack" class="section section--dark" aria-labelledby="stack-title">
+      <div class="wrap">
+        <p class="counter">04 / 06</p>
+        <h2 id="stack-title" class="heading" data-i18n="stack.title">Technical stack</h2>
+        <p class="intro" data-i18n="stack.intro">Grouped by area.</p>
+        <p class="legend">
+          <span><i class="swatch swatch--repo"></i><span data-i18n="stack.l.repo">Demonstrated in a repository</span></span>
+          <span><i class="swatch swatch--listed"></i><span data-i18n="stack.l.listed">Listed skill</span></span>
+        </p>
+        <div class="stack">
+          <div id="stack-groups" class="groups"></div>
+          <div id="stack-detail" class="detail" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach" class="section section--light" aria-labelledby="approach-title">
+      <div class="wrap">
+        <p class="counter">05 / 06</p>
+        <h2 id="approach-title" class="heading" data-i18n="approach.title">Engineering approach</h2>
+        <p class="intro" data-i18n="approach.intro">Six stages.</p>
+        <ol id="approach-list" class="steps"></ol>
+      </div>
+    </section>
+
+    <section id="cv" class="section section--dark" aria-labelledby="cv-title">
+      <div class="wrap split">
+        <div>
+          <p class="counter">06 / 06</p>
+          <h2 id="cv-title" class="heading" data-i18n="cv.title">Curriculum Vitae — Coming Soon</h2>
+          <p class="muted" data-i18n="cv.text">The document is being prepared.</p>
+        </div>
+        <div class="doc" aria-hidden="false">
+          <p class="meta doc__status"><span class="dot dot--ink"></span><span data-i18n="cv.status">No file available yet</span></p>
+          <p class="doc__label" data-i18n="cv.l1">Profile</p><span class="bar"></span><span class="bar bar--short"></span>
+          <p class="doc__label" data-i18n="cv.l2">Education</p><span class="bar"></span><span class="bar bar--short"></span>
+          <p class="doc__label" data-i18n="cv.l3">Projects</p><span class="bar"></span><span class="bar bar--short"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--dark" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title" class="heading" data-i18n="contact.title">Contact</h2>
+        <p class="intro" data-i18n="contact.text">Reach me through the channels below.</p>
+        <div class="actions">
+          <span id="contact-email"></span>
+          <a class="btn btn--ghost" data-profile="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn--ghost" data-profile="github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p class="meta" data-i18n="footer.rights">© 2026 Michael Alexander Acosta Ortega.</p>
+      <nav class="nav" data-i18n-aria="footer.nav" aria-label="Footer navigation">
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#cv" data-i18n="nav.cv">CV</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <a data-profile="github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a data-profile="linkedin" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+      <p class="meta" data-i18n="footer.built">HTML5 · CSS3 · TypeScript</p>
+    </div>
+  </footer>
+</body>
+</html>
