@@ -44,7 +44,7 @@
             spaceInvadersDescription: 'The arcade classic, rebuilt for the browser with keyboard and touch controls.',
             sudokuDescription: 'A clean Sudoku board with validation, built to be played on any screen.',
             snakeDescription: 'The timeless Snake, with keyboard and swipe controls for mobile.',
-            footerLocalTime: 'Local time',
+            footerNote: 'Made with curiosity',
             mascotLabel: 'Portfolio bot: say something',
             mascotHero: 'Hi! I’m Michael’s little bot. Welcome in.',
             mascotProfile: 'This is Michael: full-stack dev and freelancer.',
@@ -203,7 +203,7 @@
             spaceInvadersDescription: 'El clásico arcade, reconstruido para el navegador con controles de teclado y táctiles.',
             sudokuDescription: 'Un tablero de Sudoku limpio con validación, hecho para jugarse en cualquier pantalla.',
             snakeDescription: 'El Snake de siempre, con controles de teclado y gestos para móvil.',
-            footerLocalTime: 'Hora local',
+            footerNote: 'Hecho con curiosidad',
             mascotLabel: 'Bot del portafolio: di algo',
             mascotHero: '¡Hola! Soy el bot de Michael. Bienvenido.',
             mascotProfile: 'Este es Michael: dev full-stack y freelancer.',
@@ -478,8 +478,11 @@
             navigationLinks.set(link.dataset.nav, link);
     });
     const year = document.querySelector('[data-current-year]');
-    if (year)
-        year.textContent = String(new Date().getFullYear());
+    if (year) {
+        const currentYear = String(new Date().getFullYear());
+        year.textContent = currentYear;
+        year.dateTime = currentYear;
+    }
     function initializeReveals() {
         const revealTargets = document.querySelectorAll('[data-reveal]');
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1054,19 +1057,6 @@
         window.addEventListener('resize', update);
         update();
     }
-    function initializeClock() {
-        const clock = document.querySelector('[data-local-time]');
-        if (!clock)
-            return;
-        const formatter = new Intl.DateTimeFormat(language === 'es' ? 'es' : 'en', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-        const tick = () => {
-            const now = new Date();
-            clock.textContent = formatter.format(now);
-            clock.setAttribute('datetime', now.toISOString());
-        };
-        tick();
-        window.setInterval(tick, 1000);
-    }
     function initializeMascot() {
         const mascot = document.querySelector('[data-mascot]');
         const bubble = mascot?.querySelector('[data-mascot-bubble]');
@@ -1173,6 +1163,5 @@
     initializeTilt();
     initializeHeroParallax();
     initializeScrollProgress();
-    initializeClock();
     initializeMascot();
 })();

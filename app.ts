@@ -68,7 +68,7 @@
       spaceInvadersDescription: 'The arcade classic, rebuilt for the browser with keyboard and touch controls.',
       sudokuDescription: 'A clean Sudoku board with validation, built to be played on any screen.',
       snakeDescription: 'The timeless Snake, with keyboard and swipe controls for mobile.',
-      footerLocalTime: 'Local time',
+      footerNote: 'Made with curiosity',
       mascotLabel: 'Portfolio bot: say something',
       mascotHero: 'Hi! I’m Michael’s little bot. Welcome in.',
       mascotProfile: 'This is Michael: full-stack dev and freelancer.',
@@ -227,7 +227,7 @@
       spaceInvadersDescription: 'El clásico arcade, reconstruido para el navegador con controles de teclado y táctiles.',
       sudokuDescription: 'Un tablero de Sudoku limpio con validación, hecho para jugarse en cualquier pantalla.',
       snakeDescription: 'El Snake de siempre, con controles de teclado y gestos para móvil.',
-      footerLocalTime: 'Hora local',
+      footerNote: 'Hecho con curiosidad',
       mascotLabel: 'Bot del portafolio: di algo',
       mascotHero: '¡Hola! Soy el bot de Michael. Bienvenido.',
       mascotProfile: 'Este es Michael: dev full-stack y freelancer.',
@@ -509,8 +509,12 @@
     if (link.dataset.nav) navigationLinks.set(link.dataset.nav, link);
   });
 
-  const year = document.querySelector<HTMLElement>('[data-current-year]');
-  if (year) year.textContent = String(new Date().getFullYear());
+  const year = document.querySelector<HTMLTimeElement>('[data-current-year]');
+  if (year) {
+    const currentYear = String(new Date().getFullYear());
+    year.textContent = currentYear;
+    year.dateTime = currentYear;
+  }
 
   function initializeReveals(): void {
     const revealTargets = document.querySelectorAll<HTMLElement>('[data-reveal]');
@@ -1085,19 +1089,6 @@
     update();
   }
 
-  function initializeClock(): void {
-    const clock = document.querySelector<HTMLElement>('[data-local-time]');
-    if (!clock) return;
-    const formatter = new Intl.DateTimeFormat(language === 'es' ? 'es' : 'en', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
-    const tick = (): void => {
-      const now = new Date();
-      clock.textContent = formatter.format(now);
-      clock.setAttribute('datetime', now.toISOString());
-    };
-    tick();
-    window.setInterval(tick, 1000);
-  }
-
   function initializeMascot(): void {
     const mascot = document.querySelector<HTMLElement>('[data-mascot]');
     const bubble = mascot?.querySelector<HTMLElement>('[data-mascot-bubble]');
@@ -1203,6 +1194,5 @@
   initializeTilt();
   initializeHeroParallax();
   initializeScrollProgress();
-  initializeClock();
   initializeMascot();
 })();

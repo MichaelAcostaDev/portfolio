@@ -1357,11 +1357,13 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
 }
 .project-tags li:hover { border-color: var(--signal-blue); color: var(--signal-blue); transform: translateY(-1px); }
 
-/* ---------- Footer clock ---------- */
+/* ---------- Footer note ---------- */
 
-.site-footer__clock { display: flex; align-items: center; gap: 8px; font-variant-numeric: tabular-nums; }
-.site-footer__clock .status-dot { width: 6px; height: 6px; }
-.site-footer__clock time { color: var(--graphite); }
+.site-footer__note { display: flex; align-items: center; gap: 8px; }
+.site-footer__note > span:first-child {
+  color: var(--signal-blue);
+  font: 600 11px/1 Consolas, 'Courier New', monospace;
+}
 
 /* ---------- Mascot ---------- */
 
