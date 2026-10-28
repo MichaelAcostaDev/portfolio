@@ -36,6 +36,26 @@
             filterStatusAll: 'Showing all projects and games',
             filterStatusWork: 'Showing web projects',
             filterStatusGames: 'Showing games',
+            projectsHint: 'Hover a title to preview it',
+            projectTagsLabel: 'Technologies used',
+            kindWeb: 'Web project',
+            kindGame: 'Game',
+            kindCli: 'Command line',
+            spaceInvadersDescription: 'The arcade classic, rebuilt for the browser with keyboard and touch controls.',
+            sudokuDescription: 'A clean Sudoku board with validation, built to be played on any screen.',
+            snakeDescription: 'The timeless Snake, with keyboard and swipe controls for mobile.',
+            footerLocalTime: 'Local time',
+            mascotLabel: 'Portfolio bot: say something',
+            mascotHero: 'Hi! I’m Michael’s little bot. Welcome in.',
+            mascotProfile: 'This is Michael: full-stack dev and freelancer.',
+            mascotProjects: 'Hover a title to preview the project.',
+            mascotStack: 'Hover a node to peek at its syntax.',
+            mascotCv: 'The CV is coming soon. Promise.',
+            mascotContact: 'Say hi! Michael replies fast.',
+            mascotFun1: 'Beep boop. Built with HTML, CSS and TypeScript only.',
+            mascotFun2: '01001000 01101001 — that’s “Hi” in binary.',
+            mascotFun3: 'No frameworks were harmed making this site.',
+            mascotFun4: 'Tip: the project titles react to your cursor.',
             codeLink: 'Code',
             demoLink: 'Demo',
             twistoraImageLabel: 'Open the Twistora demo',
@@ -64,9 +84,6 @@
             textforgeAlt3: 'TextForge available fonts and colors',
             textforgeAlt4: 'TextForge command-line help',
             textforgeDescription: 'A Bash CLI that generates customizable ASCII banners in the terminal.',
-            gamesEyebrow: 'Small worlds, made to play',
-            gamesTitle: 'A few games',
-            featuredGame: 'FEATURED GAME',
             game2048ImageLabel: 'Play 2048',
             game2048Alt: '2048 number puzzle in progress',
             game2048Description: 'A familiar number puzzle, thoughtfully brought to the web.',
@@ -93,7 +110,7 @@
             stackNote: 'Explore a working map of technologies and skills; it is not a proficiency scale.',
             groupDevelopment: 'Development & languages',
             groupData: 'Data ecosystem',
-            groupLinux: 'Linux distributions',
+            groupOs: 'Operating systems',
             groupTools: 'Tools & delivery',
             groupSkills: 'How I work',
             cvEyebrow: 'A closer look at my journey',
@@ -120,6 +137,7 @@
             typeDatabaseEngine: 'Relational database management system',
             typeDatabaseClient: 'Database management client',
             typeLinuxDistribution: 'Linux distribution',
+            typeOperatingSystem: 'Operating system',
             typeVersionControl: 'Version control',
             typeTaskRunner: 'Task runner',
             typeDependencyManager: 'Dependency manager',
@@ -177,6 +195,26 @@
             filterStatusAll: 'Mostrando todos los proyectos y juegos',
             filterStatusWork: 'Mostrando proyectos web',
             filterStatusGames: 'Mostrando juegos',
+            projectsHint: 'Pasa el cursor por un título para verlo',
+            projectTagsLabel: 'Tecnologías utilizadas',
+            kindWeb: 'Proyecto web',
+            kindGame: 'Juego',
+            kindCli: 'Línea de comandos',
+            spaceInvadersDescription: 'El clásico arcade, reconstruido para el navegador con controles de teclado y táctiles.',
+            sudokuDescription: 'Un tablero de Sudoku limpio con validación, hecho para jugarse en cualquier pantalla.',
+            snakeDescription: 'El Snake de siempre, con controles de teclado y gestos para móvil.',
+            footerLocalTime: 'Hora local',
+            mascotLabel: 'Bot del portafolio: di algo',
+            mascotHero: '¡Hola! Soy el bot de Michael. Bienvenido.',
+            mascotProfile: 'Este es Michael: dev full-stack y freelancer.',
+            mascotProjects: 'Pasa el cursor por un título para ver el proyecto.',
+            mascotStack: 'Pasa el cursor por un nodo para ver su sintaxis.',
+            mascotCv: 'El CV llega pronto. Lo prometo.',
+            mascotContact: '¡Saluda! Michael responde rápido.',
+            mascotFun1: 'Bip bup. Hecho solo con HTML, CSS y TypeScript.',
+            mascotFun2: '01001000 01101111 01101100 01100001 — eso es “Hola” en binario.',
+            mascotFun3: 'Ningún framework fue dañado al hacer esta web.',
+            mascotFun4: 'Pista: los títulos de los proyectos reaccionan al cursor.',
             codeLink: 'Código',
             demoLink: 'Demo',
             twistoraImageLabel: 'Abrir la demo de Twistora',
@@ -205,9 +243,6 @@
             textforgeAlt3: 'Fuentes y colores disponibles en TextForge',
             textforgeAlt4: 'Ayuda de línea de comandos de TextForge',
             textforgeDescription: 'Una CLI en Bash que genera banners ASCII personalizables en la terminal.',
-            gamesEyebrow: 'Pequeños mundos para jugar',
-            gamesTitle: 'Algunos juegos',
-            featuredGame: 'JUEGO DESTACADO',
             game2048ImageLabel: 'Jugar 2048',
             game2048Alt: 'Partida de rompecabezas numérico 2048',
             game2048Description: 'Un rompecabezas numérico clásico, llevado a la web con cuidado.',
@@ -234,7 +269,7 @@
             stackNote: 'Explora un mapa interactivo de tecnologías y habilidades; no representa niveles de dominio.',
             groupDevelopment: 'Desarrollo y lenguajes',
             groupData: 'Ecosistema de datos',
-            groupLinux: 'Distribuciones Linux',
+            groupOs: 'Sistemas operativos',
             groupTools: 'Herramientas y despliegue',
             groupSkills: 'Cómo trabajo',
             cvEyebrow: 'Un vistazo a mi recorrido',
@@ -261,6 +296,7 @@
             typeDatabaseEngine: 'Sistema de gestión de bases de datos relacionales',
             typeDatabaseClient: 'Cliente de gestión de bases de datos',
             typeLinuxDistribution: 'Distribución Linux',
+            typeOperatingSystem: 'Sistema operativo',
             typeVersionControl: 'Control de versiones',
             typeTaskRunner: 'Ejecutor de tareas',
             typeDependencyManager: 'Gestor de dependencias',
@@ -288,7 +324,7 @@
     const groups = [
         { id: 'development', labelKey: 'groupDevelopment' },
         { id: 'data', labelKey: 'groupData' },
-        { id: 'linux', labelKey: 'groupLinux' },
+        { id: 'os', labelKey: 'groupOs' },
         { id: 'tools', labelKey: 'groupTools' },
         { id: 'skills', labelKey: 'groupSkills' }
     ];
@@ -313,11 +349,17 @@
         { id: 'postgresql', name: 'PostgreSQL', mark: 'Pg', group: 'data', typeKey: 'typeDatabaseEngine' },
         { id: 'dbeaver', name: 'DBeaver', mark: 'Db', group: 'data', typeKey: 'typeDatabaseClient' },
         { id: 'tableplus', name: 'TablePlus', mark: 'Tp', group: 'data', typeKey: 'typeDatabaseClient' },
-        { id: 'arch', name: 'Arch Linux', mark: 'A', group: 'linux', typeKey: 'typeLinuxDistribution' },
-        { id: 'kali', name: 'Kali Linux', mark: 'K', group: 'linux', typeKey: 'typeLinuxDistribution' },
-        { id: 'fedora', name: 'Fedora', mark: 'F', group: 'linux', typeKey: 'typeLinuxDistribution' },
-        { id: 'ubuntu', name: 'Ubuntu', mark: 'U', group: 'linux', typeKey: 'typeLinuxDistribution' },
-        { id: 'debian', name: 'Debian', mark: 'D', group: 'linux', typeKey: 'typeLinuxDistribution' },
+        { id: 'arch', name: 'Arch Linux', mark: 'A', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'kali', name: 'Kali Linux', mark: 'K', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'fedora', name: 'Fedora', mark: 'F', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'ubuntu', name: 'Ubuntu', mark: 'U', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'debian', name: 'Debian', mark: 'D', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'nyarch', name: 'NyArch', mark: 'Ny', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'linuxmint', name: 'Linux Mint', mark: 'LM', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'lubuntu', name: 'Lubuntu', mark: 'Lu', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'void', name: 'Void Linux', mark: 'V', group: 'os', typeKey: 'typeLinuxDistribution' },
+        { id: 'windows11', name: 'Windows 11', mark: 'W11', group: 'os', typeKey: 'typeOperatingSystem' },
+        { id: 'windows7', name: 'Windows 7', mark: 'W7', group: 'os', typeKey: 'typeOperatingSystem' },
         { id: 'git', name: 'Git', mark: '⑂', group: 'tools', typeKey: 'typeVersionControl' },
         { id: 'github', name: 'GitHub', mark: 'GH', group: 'tools', typeKey: 'typeCollaborationPlatform' },
         { id: 'gulp', name: 'Gulp', mark: 'G', group: 'tools', typeKey: 'typeTaskRunner' },
@@ -364,6 +406,12 @@
         fedora: 'sudo dnf upgrade',
         ubuntu: 'sudo apt update',
         debian: 'sudo apt update',
+        nyarch: 'yay -Syu  # nyaa~',
+        linuxmint: 'sudo apt update && sudo apt upgrade',
+        lubuntu: 'sudo apt update',
+        void: 'sudo xbps-install -Su',
+        windows11: 'winget upgrade --all',
+        windows7: 'C:\\> dir /w',
         git: 'git status --short',
         github: 'git push origin main',
         gulp: "gulp.task('build', gulp.series('styles'));",
@@ -480,33 +528,72 @@
                 else
                     link.removeAttribute('aria-current');
             });
+            document.dispatchEvent(new CustomEvent('sectionchange', { detail: activeSection.id }));
         }, { rootMargin: '-30% 0px -60% 0px' });
         sectionObserverTargets.forEach((section) => sectionObserver.observe(section));
     }
-    function initializeProjectFilters() {
+    function initializeProjects() {
+        const showcase = document.querySelector('[data-project-showcase]');
         const filterGroup = document.querySelector('[data-project-filters]');
-        const projectList = document.querySelector('[data-project-list]');
-        const gameCollection = document.querySelector('[data-project-games]');
         const status = document.querySelector('[data-project-filter-status]');
-        if (!filterGroup || !projectList || !gameCollection || !status)
+        if (!showcase || !filterGroup || !status)
             return;
-        status.textContent = translate('filterStatusAll');
+        const entries = [...showcase.querySelectorAll('[data-project-entry]')];
+        let activeEntry;
+        const activate = (entry) => {
+            if (entry === activeEntry)
+                return;
+            activeEntry = entry;
+            entries.forEach((candidate) => {
+                const isActive = candidate === entry;
+                candidate.toggleAttribute('data-active', isActive);
+                candidate.querySelector('[data-project-row]')?.setAttribute('aria-expanded', String(isActive));
+            });
+        };
+        entries.forEach((entry) => {
+            const row = entry.querySelector('[data-project-row]');
+            if (!row)
+                return;
+            row.addEventListener('click', () => activate(entry));
+            row.addEventListener('focus', () => activate(entry));
+            row.addEventListener('pointerenter', (event) => {
+                if (event.pointerType !== 'touch')
+                    activate(entry);
+            });
+            row.addEventListener('keydown', (event) => {
+                if (!['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key))
+                    return;
+                const visible = entries.filter((candidate) => !candidate.hidden);
+                const currentIndex = visible.indexOf(entry);
+                const targetIndex = event.key === 'Home'
+                    ? 0
+                    : event.key === 'End'
+                        ? visible.length - 1
+                        : (currentIndex + (event.key === 'ArrowDown' ? 1 : -1) + visible.length) % visible.length;
+                event.preventDefault();
+                visible[targetIndex]?.querySelector('[data-project-row]')?.focus();
+            });
+        });
+        const applyFilter = (filter) => {
+            entries.forEach((entry) => {
+                entry.hidden = filter !== 'all' && entry.dataset.category !== filter;
+            });
+            filterGroup.querySelectorAll('[data-project-filter]').forEach((filterButton) => {
+                filterButton.setAttribute('aria-pressed', String(filterButton.dataset.projectFilter === filter));
+            });
+            status.textContent = translate(filter === 'all' ? 'filterStatusAll' : filter === 'work' ? 'filterStatusWork' : 'filterStatusGames');
+            const firstVisible = entries.find((entry) => !entry.hidden);
+            if ((!activeEntry || activeEntry.hidden) && firstVisible)
+                activate(firstVisible);
+        };
         filterGroup.querySelectorAll('[data-project-filter]').forEach((button) => {
             button.addEventListener('click', () => {
                 const filter = button.dataset.projectFilter;
-                if (filter !== 'all' && filter !== 'work' && filter !== 'games')
-                    return;
-                projectList.hidden = filter === 'games';
-                gameCollection.hidden = filter === 'work';
-                filterGroup.querySelectorAll('[data-project-filter]').forEach((filterButton) => {
-                    filterButton.setAttribute('aria-pressed', String(filterButton === button));
-                });
-                const statusKey = filter === 'all'
-                    ? 'filterStatusAll'
-                    : filter === 'work' ? 'filterStatusWork' : 'filterStatusGames';
-                status.textContent = translate(statusKey);
+                if (filter === 'all' || filter === 'work' || filter === 'games')
+                    applyFilter(filter);
             });
         });
+        applyFilter('all');
     }
     function initializeStack() {
         const root = document.querySelector('[data-stack]');
@@ -548,7 +635,11 @@
         const getFileExtension = (item) => {
             if (item.group === 'data')
                 return 'sql';
-            if (item.group === 'linux' || item.id === 'bash' || item.id === 'git' || item.id === 'github' || item.id === 'composer' || item.id === 'npm' || item.id === 'docker' || item.id === 'vercel')
+            if (item.id === 'windows11')
+                return 'ps1';
+            if (item.id === 'windows7')
+                return 'bat';
+            if (item.group === 'os' || item.id === 'bash' || item.id === 'git' || item.id === 'github' || item.id === 'composer' || item.id === 'npm' || item.id === 'docker' || item.id === 'vercel')
                 return 'sh';
             if (item.group === 'skills')
                 return 'md';
@@ -659,13 +750,15 @@
             label.className = 'stack-node__name';
             label.textContent = getItemName(item);
             button.append(mark, label);
-            button.addEventListener('pointerenter', () => setPreview(item));
-            button.addEventListener('pointerleave', () => setPreview(selectedItem ?? item));
-            button.addEventListener('focus', () => {
+            const select = () => {
+                selectedItem = item;
                 setPreview(item);
+            };
+            button.addEventListener('pointerenter', select);
+            button.addEventListener('focus', () => {
+                select();
                 triggerBurst(button);
             });
-            button.addEventListener('blur', () => setPreview(selectedItem ?? item));
             button.addEventListener('click', () => {
                 selectedItem = item;
                 setPreview(item);
@@ -716,6 +809,7 @@
             tab.setAttribute('aria-selected', 'false');
             tab.tabIndex = -1;
             tab.textContent = translate(group.labelKey);
+            tab.dataset.magnetic = '';
             tab.addEventListener('click', () => renderGroup(group));
             tab.addEventListener('keydown', (event) => {
                 if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key))
@@ -810,10 +904,275 @@
             showImage(activeIndex);
         });
     }
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const scrambleGlyphs = '!<>-_\\/[]{}—=+*^?#01';
+    function scrambleText(element, duration = 520) {
+        if (motionQuery.matches)
+            return;
+        const original = element.dataset.scrambleOriginal ?? element.textContent ?? '';
+        element.dataset.scrambleOriginal = original;
+        const existing = Number(element.dataset.scrambleFrame ?? 0);
+        if (existing)
+            window.cancelAnimationFrame(existing);
+        const start = performance.now();
+        const characters = [...original];
+        const step = (now) => {
+            const progress = Math.min(1, (now - start) / duration);
+            const resolved = Math.floor(progress * characters.length);
+            element.textContent = characters.map((character, index) => {
+                if (character === ' ' || index < resolved)
+                    return character;
+                return scrambleGlyphs[Math.floor(Math.random() * scrambleGlyphs.length)] ?? character;
+            }).join('');
+            if (progress < 1) {
+                element.dataset.scrambleFrame = String(window.requestAnimationFrame(step));
+            }
+            else {
+                element.textContent = original;
+                element.dataset.scrambleFrame = '0';
+            }
+        };
+        element.dataset.scrambleFrame = String(window.requestAnimationFrame(step));
+    }
+    function initializeScramble() {
+        document.querySelectorAll('[data-scramble]').forEach((element) => {
+            const trigger = element.closest('a, button') ?? element;
+            trigger.addEventListener('pointerenter', () => scrambleText(element));
+            trigger.addEventListener('focus', () => scrambleText(element));
+        });
+    }
+    function initializeHeroIntro() {
+        if (motionQuery.matches)
+            return;
+        document.querySelectorAll('[data-decode]').forEach((element, index) => {
+            window.setTimeout(() => scrambleText(element, 900), 120 + index * 260);
+        });
+    }
+    function initializeMagnetic() {
+        if (motionQuery.matches)
+            return;
+        const strength = 0.28;
+        document.addEventListener('pointermove', (event) => {
+            if (event.pointerType === 'touch')
+                return;
+            const target = event.target?.closest('[data-magnetic]');
+            if (!target)
+                return;
+            const bounds = target.getBoundingClientRect();
+            const offsetX = (event.clientX - (bounds.left + bounds.width / 2)) * strength;
+            const offsetY = (event.clientY - (bounds.top + bounds.height / 2)) * strength;
+            target.style.setProperty('--magnet-x', `${offsetX.toFixed(1)}px`);
+            target.style.setProperty('--magnet-y', `${offsetY.toFixed(1)}px`);
+            target.classList.add('is-magnetic');
+        });
+        document.addEventListener('pointerout', (event) => {
+            const target = event.target?.closest('[data-magnetic]');
+            const next = event.relatedTarget?.closest('[data-magnetic]');
+            if (!target || target === next)
+                return;
+            target.style.removeProperty('--magnet-x');
+            target.style.removeProperty('--magnet-y');
+            target.classList.remove('is-magnetic');
+        });
+    }
+    function initializeTilt() {
+        if (motionQuery.matches)
+            return;
+        document.querySelectorAll('[data-tilt]').forEach((element) => {
+            let frame = 0;
+            element.addEventListener('pointermove', (event) => {
+                if (frame || event.pointerType === 'touch')
+                    return;
+                frame = window.requestAnimationFrame(() => {
+                    frame = 0;
+                    const bounds = element.getBoundingClientRect();
+                    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+                    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+                    element.style.setProperty('--tilt-x', `${(y * -6).toFixed(2)}deg`);
+                    element.style.setProperty('--tilt-y', `${(x * 8).toFixed(2)}deg`);
+                    element.style.setProperty('--glare-x', `${((x + 0.5) * 100).toFixed(1)}%`);
+                    element.style.setProperty('--glare-y', `${((y + 0.5) * 100).toFixed(1)}%`);
+                    element.classList.add('is-tilting');
+                });
+            });
+            element.addEventListener('pointerleave', () => {
+                if (frame)
+                    window.cancelAnimationFrame(frame);
+                frame = 0;
+                element.classList.remove('is-tilting');
+                ['--tilt-x', '--tilt-y', '--glare-x', '--glare-y'].forEach((property) => element.style.removeProperty(property));
+            });
+        });
+    }
+    function initializeHeroParallax() {
+        const hero = document.querySelector('[data-hero]');
+        if (!hero || motionQuery.matches)
+            return;
+        const layers = [...hero.querySelectorAll('[data-depth], [data-parallax]')];
+        let frame = 0;
+        hero.addEventListener('pointermove', (event) => {
+            if (frame || event.pointerType === 'touch')
+                return;
+            frame = window.requestAnimationFrame(() => {
+                frame = 0;
+                const bounds = hero.getBoundingClientRect();
+                const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+                const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+                hero.style.setProperty('--spot-x', `${((x + 0.5) * 100).toFixed(1)}%`);
+                hero.style.setProperty('--spot-y', `${((y + 0.5) * 100).toFixed(1)}%`);
+                hero.classList.add('has-spotlight');
+                layers.forEach((layer) => {
+                    const depth = Number(layer.dataset.depth ?? layer.dataset.parallax ?? 1);
+                    layer.style.setProperty('--px', `${(x * depth * -22).toFixed(1)}px`);
+                    layer.style.setProperty('--py', `${(y * depth * -16).toFixed(1)}px`);
+                });
+            });
+        });
+        hero.addEventListener('pointerleave', () => {
+            hero.classList.remove('has-spotlight');
+            layers.forEach((layer) => {
+                layer.style.removeProperty('--px');
+                layer.style.removeProperty('--py');
+            });
+        });
+    }
+    function initializeScrollProgress() {
+        const bar = document.querySelector('[data-scroll-progress]');
+        if (!bar)
+            return;
+        let frame = 0;
+        const update = () => {
+            frame = 0;
+            const max = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+            bar.style.transform = `scaleX(${progress.toFixed(4)})`;
+        };
+        window.addEventListener('scroll', () => {
+            if (!frame)
+                frame = window.requestAnimationFrame(update);
+        }, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+    }
+    function initializeClock() {
+        const clock = document.querySelector('[data-local-time]');
+        if (!clock)
+            return;
+        const formatter = new Intl.DateTimeFormat(language === 'es' ? 'es' : 'en', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+        const tick = () => {
+            const now = new Date();
+            clock.textContent = formatter.format(now);
+            clock.setAttribute('datetime', now.toISOString());
+        };
+        tick();
+        window.setInterval(tick, 1000);
+    }
+    function initializeMascot() {
+        const mascot = document.querySelector('[data-mascot]');
+        const bubble = mascot?.querySelector('[data-mascot-bubble]');
+        const text = mascot?.querySelector('[data-mascot-text]');
+        const button = mascot?.querySelector('[data-mascot-button]');
+        if (!mascot || !bubble || !text || !button)
+            return;
+        const sectionMessages = {
+            inicio: 'mascotHero',
+            perfil: 'mascotProfile',
+            proyectos: 'mascotProjects',
+            stack: 'mascotStack',
+            cv: 'mascotCv',
+            contacto: 'mascotContact'
+        };
+        const funMessages = ['mascotFun1', 'mascotFun2', 'mascotFun3', 'mascotFun4'];
+        let typingTimer = 0;
+        let hideTimer = 0;
+        let funIndex = 0;
+        let currentKey = '';
+        let currentSection = 'inicio';
+        const say = (key, sticky = false) => {
+            if (key === currentKey && !sticky)
+                return;
+            currentKey = key;
+            const message = translate(key);
+            window.clearTimeout(typingTimer);
+            window.clearTimeout(hideTimer);
+            bubble.classList.add('is-visible');
+            mascot.classList.add('is-talking');
+            if (motionQuery.matches) {
+                text.textContent = message;
+                mascot.classList.remove('is-talking');
+            }
+            else {
+                const characters = [...message];
+                let index = 0;
+                text.textContent = '';
+                const type = () => {
+                    index += 1;
+                    text.textContent = characters.slice(0, index).join('');
+                    if (index < characters.length)
+                        typingTimer = window.setTimeout(type, 22);
+                    else
+                        mascot.classList.remove('is-talking');
+                };
+                type();
+            }
+            hideTimer = window.setTimeout(() => bubble.classList.remove('is-visible'), sticky ? 7000 : 5000);
+        };
+        document.addEventListener('sectionchange', (event) => {
+            const sectionId = event.detail;
+            currentSection = sectionId;
+            mascot.classList.toggle('is-docked', sectionId !== 'inicio');
+            const key = sectionMessages[sectionId];
+            if (key)
+                say(key);
+        });
+        button.addEventListener('click', () => {
+            mascot.classList.remove('is-jumping');
+            void mascot.offsetWidth;
+            mascot.classList.add('is-jumping');
+            const key = funMessages[funIndex % funMessages.length] ?? 'mascotFun1';
+            funIndex += 1;
+            say(key, true);
+        });
+        button.addEventListener('pointerenter', () => {
+            mascot.classList.add('is-excited');
+            if (!bubble.classList.contains('is-visible'))
+                say(sectionMessages[currentSection] ?? 'mascotHero', true);
+        });
+        button.addEventListener('pointerleave', () => mascot.classList.remove('is-excited'));
+        if (!motionQuery.matches) {
+            let frame = 0;
+            document.addEventListener('pointermove', (event) => {
+                if (frame || event.pointerType === 'touch')
+                    return;
+                frame = window.requestAnimationFrame(() => {
+                    frame = 0;
+                    const bounds = button.getBoundingClientRect();
+                    const deltaX = event.clientX - (bounds.left + bounds.width / 2);
+                    const deltaY = event.clientY - (bounds.top + bounds.height * 0.3);
+                    const distance = Math.hypot(deltaX, deltaY) || 1;
+                    const reach = Math.min(1, distance / 240);
+                    mascot.style.setProperty('--eye-x', `${(deltaX / distance * 1.4 * reach).toFixed(2)}px`);
+                    mascot.style.setProperty('--eye-y', `${(deltaY / distance * 1.2 * reach).toFixed(2)}px`);
+                });
+            });
+        }
+        window.setTimeout(() => {
+            mascot.classList.add('is-awake');
+            say(sectionMessages[currentSection] ?? 'mascotHero', true);
+        }, 700);
+    }
     applyTranslations();
     initializeReveals();
     initializeNavigation();
-    initializeProjectFilters();
+    initializeProjects();
     initializeStack();
     initializeGalleries();
+    initializeScramble();
+    initializeHeroIntro();
+    initializeMagnetic();
+    initializeTilt();
+    initializeHeroParallax();
+    initializeScrollProgress();
+    initializeClock();
+    initializeMascot();
 })();
