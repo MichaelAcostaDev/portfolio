@@ -103,9 +103,18 @@
       playLink: 'Play',
       stackEyebrow: 'A few selected technologies',
       stackTitle: 'My ecosystem',
-      stackGroupsLabel: 'Technologies and skills',
-      stackDetailsLabel: 'Selected item details',
-      stackNote: 'Select an item to see its category.',
+      stackLabName: 'STACK / SYSTEM MAP',
+      stackSystemReady: 'System ready',
+      stackSystemConnected: 'Connected',
+      stackGroupsLabel: 'Technology categories',
+      stackVisualLabel: 'Connected technology nodes',
+      stackNodeLabel: 'Technology nodes',
+      stackDetailsLabel: 'Selected item details and syntax preview',
+      stackSyntaxLabel: 'SYNTAX PREVIEW',
+      stackCoreLabel: 'FULL-STACK',
+      stackExploreHint: 'Select a node to inspect its syntax',
+      stackItemsLabel: 'NODES',
+      stackNote: 'Explore a working map of technologies and skills; it is not a proficiency scale.',
       groupDevelopment: 'Development & languages',
       groupData: 'Data ecosystem',
       groupLinux: 'Linux distributions',
@@ -235,9 +244,18 @@
       playLink: 'Jugar',
       stackEyebrow: 'Algunas tecnologías seleccionadas',
       stackTitle: 'Mi ecosistema',
-      stackGroupsLabel: 'Tecnologías y habilidades',
-      stackDetailsLabel: 'Detalles del elemento seleccionado',
-      stackNote: 'Selecciona un elemento para ver su categoría.',
+      stackLabName: 'STACK / MAPA DEL SISTEMA',
+      stackSystemReady: 'Sistema listo',
+      stackSystemConnected: 'Conectado',
+      stackGroupsLabel: 'Categorías tecnológicas',
+      stackVisualLabel: 'Nodos de tecnologías conectadas',
+      stackNodeLabel: 'Nodos tecnológicos',
+      stackDetailsLabel: 'Detalles y vista de sintaxis del elemento seleccionado',
+      stackSyntaxLabel: 'VISTA DE SINTAXIS',
+      stackCoreLabel: 'FULL-STACK',
+      stackExploreHint: 'Selecciona un nodo para explorar su sintaxis',
+      stackItemsLabel: 'NODOS',
+      stackNote: 'Explora un mapa interactivo de tecnologías y habilidades; no representa niveles de dominio.',
       groupDevelopment: 'Desarrollo y lenguajes',
       groupData: 'Ecosistema de datos',
       groupLinux: 'Distribuciones Linux',
@@ -346,6 +364,53 @@
     { id: 'english', name: 'English as a second language', labelKey: 'skillEnglish', mark: 'EN', group: 'skills', typeKey: 'typeLanguageSkill' },
     { id: 'autonomy', name: 'Independent project work', labelKey: 'skillAutonomy', mark: '↗', group: 'skills', typeKey: 'typeIndependentWork' }
   ];
+
+  const stackCodeSamples: Record<string, string> = {
+    html5: '<main>\n  <h1>Build with intent</h1>\n</main>',
+    css3: '.portfolio {\n  display: grid;\n  gap: 1.5rem;\n}',
+    threejs: 'const scene = new THREE.Scene();\nconst camera = new THREE.PerspectiveCamera();',
+    sass: '$ink: #171717;\n\n.portfolio {\n  color: $ink;\n}',
+    tailwind: '<div class="grid gap-6">\n  <article>...</article>\n</div>',
+    chartjs: 'new Chart(canvas, {\n  type: "line",\n  data: { labels, datasets }\n});',
+    leaflet: "L.map('map').setView([0, 0], 3);",
+    php: "<?php\n$project = 'portfolio';\necho $project;",
+    flask: "@app.get('/')\ndef home():\n    return 'Portfolio'",
+    'scikit-learn': 'model = LogisticRegression()\nmodel.fit(features, labels)',
+    typescript: 'type Project = { name: string };\nconst projects: Project[] = [];',
+    javascript: "const projects = ['web', 'games'];",
+    python: "def build_portfolio():\n    return 'Michael Acosta'",
+    bash: "printf '%s\\n' 'Hello, portfolio'",
+    sql: 'SELECT name\nFROM projects\nORDER BY name;',
+    mysql: 'SELECT name FROM projects\nLIMIT 5;',
+    mariadb: 'SELECT name FROM projects\nLIMIT 5;',
+    postgresql: 'SELECT name FROM projects\nLIMIT 5;',
+    dbeaver: 'SELECT COUNT(*)\nFROM projects;',
+    tableplus: 'SELECT COUNT(*)\nFROM projects;',
+    arch: 'sudo pacman -Syu',
+    kali: 'sudo apt update',
+    fedora: 'sudo dnf upgrade',
+    ubuntu: 'sudo apt update',
+    debian: 'sudo apt update',
+    git: 'git status --short',
+    github: 'git push origin main',
+    gulp: "gulp.task('build', gulp.series('styles'));",
+    composer: 'composer install',
+    nodejs: 'node --version',
+    npm: 'npm run build',
+    cloudflare: "export default {\n  fetch() {\n    return new Response('Hello');\n  }\n};",
+    docker: 'docker build -t portfolio .',
+    vercel: 'vercel --prod',
+    vitest: "import { test, expect } from 'vitest';\ntest('works', () => expect(true).toBe(true));",
+    teamwork: '// Share context. Build together.',
+    collaboration: "const feedback = { open: true };",
+    'problem-solving': 'const nextStep = problems.find(Boolean);',
+    learning: 'const notes = [...previousNotes, newIdea];',
+    adaptability: "const approach = needsChange ? 'adjust' : 'continue';",
+    organization: 'const tasks = [...backlog].sort(byPriority);',
+    typing: '// Practice builds accuracy.',
+    english: "const greeting = 'Hello, world!';",
+    autonomy: 'function deliver(task) {\n  return task.complete();\n}'
+  };
 
   const galleryImages: Record<string, GalleryImage[]> = {
     interest: [
@@ -481,67 +546,261 @@
   function initializeStack(): void {
     const root = document.querySelector<HTMLElement>('[data-stack]');
     const groupsContainer = root?.querySelector<HTMLElement>('[data-stack-groups]');
+    const visual = root?.querySelector<HTMLElement>('[data-stack-visual]');
+    const leftNodes = root?.querySelector<HTMLElement>('[data-stack-nodes-left]');
+    const rightNodes = root?.querySelector<HTMLElement>('[data-stack-nodes-right]');
+    const panel = root?.querySelector<HTMLElement>('[data-stack-panel]');
+    const connections = root?.querySelector<SVGSVGElement>('[data-stack-connections]');
+    const burst = root?.querySelector<HTMLElement>('[data-stack-burst]');
+    const core = root?.querySelector<HTMLElement>('[data-stack-core]');
+    const state = root?.querySelector<HTMLElement>('[data-stack-state]');
+    const file = root?.querySelector<HTMLElement>('[data-stack-file]');
+    const count = root?.querySelector<HTMLElement>('[data-stack-count]');
+    const lineNumbers = root?.querySelector<HTMLElement>('[data-stack-line-numbers]');
+    const code = root?.querySelector<HTMLElement>('[data-stack-code]');
     const detailGroup = root?.querySelector<HTMLElement>('[data-detail-group]');
     const detailMark = root?.querySelector<HTMLElement>('[data-detail-mark]');
     const detailName = root?.querySelector<HTMLElement>('[data-detail-name]');
     const detailType = root?.querySelector<HTMLElement>('[data-detail-type]');
-    if (!root || !groupsContainer || !detailGroup || !detailMark || !detailName || !detailType) return;
+    if (
+      !root || !groupsContainer || !visual || !leftNodes || !rightNodes || !panel ||
+      !connections || !burst || !core || !state || !file || !count || !lineNumbers ||
+      !code || !detailGroup || !detailMark || !detailName || !detailType
+    ) return;
 
-    const selectItem = (item: StackItem): void => {
-      root.querySelectorAll<HTMLButtonElement>('[data-stack-item]').forEach((button) => {
-        button.setAttribute('aria-pressed', String(button.dataset.stackItem === item.id));
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const symbolSet = ['{ }', '< />', '=>', ';', '&&', '01', '[]', '<>'];
+    const particleVectors: Array<[number, number]> = [
+      [-1, -0.5], [-0.6, -1], [0.2, -1], [1, -0.6], [1, 0.4], [0.4, 1], [-0.6, 1], [-1, 0.2]
+    ];
+    let activeGroup = groups[0];
+    let selectedItem = stackItems[0];
+    let burstTimeout: number | undefined;
+    let pointerFrame = 0;
+    let lastBurstTime = 0;
+    let codeAnimation: Animation | undefined;
+
+    if (!activeGroup || !selectedItem) return;
+
+    const getItemName = (item: StackItem): string => item.labelKey ? translate(item.labelKey) : item.name;
+
+    const getFileExtension = (item: StackItem): string => {
+      if (item.group === 'data') return 'sql';
+      if (item.group === 'linux' || item.id === 'bash' || item.id === 'git' || item.id === 'github' || item.id === 'composer' || item.id === 'npm' || item.id === 'docker' || item.id === 'vercel') return 'sh';
+      if (item.group === 'skills') return 'md';
+      if (item.id === 'html5') return 'html';
+      if (item.id === 'css3' || item.id === 'sass' || item.id === 'tailwind') return 'css';
+      if (item.id === 'php') return 'php';
+      if (item.id === 'python' || item.id === 'flask' || item.id === 'scikit-learn') return 'py';
+      if (item.id === 'typescript') return 'ts';
+      if (item.id === 'gulp' || item.id === 'cloudflare' || item.id === 'vitest') return 'js';
+      return 'js';
+    };
+
+    const drawConnections = (): void => {
+      const bounds = visual.getBoundingClientRect();
+      const coreBounds = core.getBoundingClientRect();
+      if (!bounds.width || !bounds.height) return;
+
+      connections.setAttribute('viewBox', `0 0 ${bounds.width} ${bounds.height}`);
+      connections.replaceChildren();
+      const centerX = coreBounds.left + coreBounds.width / 2 - bounds.left;
+      const centerY = coreBounds.top + coreBounds.height / 2 - bounds.top;
+
+      visual.querySelectorAll<HTMLButtonElement>('[data-stack-item]').forEach((button) => {
+        const nodeBounds = button.getBoundingClientRect();
+        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        line.classList.add('stack-connection');
+        line.dataset.connection = button.dataset.stackItem;
+        line.dataset.active = String(button.dataset.stackItem === selectedItem?.id);
+        line.setAttribute('x1', String(nodeBounds.left + nodeBounds.width / 2 - bounds.left));
+        line.setAttribute('y1', String(nodeBounds.top + nodeBounds.height / 2 - bounds.top));
+        line.setAttribute('x2', String(centerX));
+        line.setAttribute('y2', String(centerY));
+        connections.append(line);
       });
+    };
+
+    const setPreview = (item: StackItem): void => {
       const group = groups.find((candidate) => candidate.id === item.group);
       if (!group) throw new Error(`Missing stack group: ${item.group}`);
       detailGroup.textContent = translate(group.labelKey);
       detailMark.textContent = item.mark;
-      detailName.textContent = item.labelKey ? translate(item.labelKey) : item.name;
+      detailName.textContent = getItemName(item);
       detailType.textContent = translate(item.typeKey);
-    };
+      state.textContent = `${translate('stackSystemConnected')} · ${getItemName(item)}`;
+      file.textContent = `${item.id}.${getFileExtension(item)}`;
 
-    const groupElements = groups.map((group) => {
-      const section = document.createElement('section');
-      section.className = `stack-group stack-group--${group.id}`;
-      section.setAttribute('aria-labelledby', `stack-group-${group.id}`);
+      const sample = stackCodeSamples[item.id];
+      if (sample === undefined) throw new Error(`Missing stack code sample: ${item.id}`);
+      code.textContent = sample;
+      const lineCount = sample.split('\n').length;
+      lineNumbers.textContent = Array.from({ length: lineCount }, (_, index) => String(index + 1).padStart(2, '0')).join('\n');
+      codeAnimation?.cancel();
+      if (!reducedMotion.matches) {
+        codeAnimation = code.animate(
+          [{ opacity: 0.35, transform: 'translateY(3px)' }, { opacity: 1, transform: 'translateY(0)' }],
+          { duration: 170, easing: 'ease-out' }
+        );
+      }
 
-      const heading = document.createElement('h3');
-      heading.className = 'stack-group__title';
-      heading.id = `stack-group-${group.id}`;
-      heading.textContent = translate(group.labelKey);
-      section.append(heading);
-
-      const list = document.createElement('div');
-      list.className = 'technology-list';
-      list.setAttribute('role', 'group');
-      list.setAttribute('aria-label', translate(group.labelKey));
-
-      stackItems.filter((item) => item.group === group.id).forEach((item) => {
-        const button = document.createElement('button');
-        button.className = 'technology';
-        button.type = 'button';
-        button.dataset.stackItem = item.id;
-        button.setAttribute('aria-pressed', 'false');
-
-        const mark = document.createElement('span');
-        mark.className = 'technology__mark';
-        mark.setAttribute('aria-hidden', 'true');
-        mark.textContent = item.mark;
-
-        const label = document.createElement('span');
-        label.className = 'technology__name';
-        label.textContent = item.labelKey ? translate(item.labelKey) : item.name;
-        button.append(mark, label);
-        button.addEventListener('click', () => selectItem(item));
-        list.append(button);
+      const selectedButton = visual.querySelector<HTMLButtonElement>(`[data-stack-item="${item.id}"]`);
+      visual.querySelectorAll<HTMLButtonElement>('[data-stack-item]').forEach((button) => {
+        button.setAttribute('aria-pressed', String(button === selectedButton));
+      });
+      visual.querySelectorAll<SVGLineElement>('[data-connection]').forEach((line) => {
+        line.dataset.active = String(line.dataset.connection === item.id);
       });
 
-      section.append(list);
-      return section;
-    });
-    groupsContainer.replaceChildren(...groupElements);
+      const itemIndex = stackItems.findIndex((candidate) => candidate.id === item.id);
+      core.style.setProperty('--cube-rx', `${-18 + (itemIndex % 5) * 7}deg`);
+      core.style.setProperty('--cube-ry', `${28 + (itemIndex % 7) * 13}deg`);
+      core.dataset.activeItem = item.id;
+    };
 
-    const firstItem = stackItems[0];
-    if (firstItem) selectItem(firstItem);
+    const triggerBurst = (target: HTMLElement): void => {
+      const now = performance.now();
+      if (reducedMotion.matches || now - lastBurstTime < 180) return;
+      lastBurstTime = now;
+      window.clearTimeout(burstTimeout);
+      burst.replaceChildren();
+      const visualBounds = visual.getBoundingClientRect();
+      const targetBounds = target.getBoundingClientRect();
+      const originX = targetBounds.left + targetBounds.width / 2 - visualBounds.left;
+      const originY = targetBounds.top + targetBounds.height / 2 - visualBounds.top;
+
+      particleVectors.forEach((vector, index) => {
+        const [vectorX, vectorY] = vector;
+        const particle = document.createElement('span');
+        particle.className = 'stack-particle';
+        particle.textContent = symbolSet[index] ?? ';';
+        particle.style.left = `${originX}px`;
+        particle.style.top = `${originY}px`;
+        particle.style.setProperty('--particle-x', `${vectorX * 38}px`);
+        particle.style.setProperty('--particle-y', `${vectorY * 38}px`);
+        particle.style.setProperty('--particle-delay', `${index % 4 * 18}ms`);
+        burst.append(particle);
+      });
+      burstTimeout = window.setTimeout(() => burst.replaceChildren(), 720);
+    };
+
+    const createNode = (item: StackItem, side: 'left' | 'right'): HTMLButtonElement => {
+      const button = document.createElement('button');
+      button.className = `stack-node stack-node--${side}`;
+      button.type = 'button';
+      button.dataset.stackItem = item.id;
+      button.setAttribute('aria-pressed', 'false');
+
+      const mark = document.createElement('span');
+      mark.className = 'stack-node__mark';
+      mark.setAttribute('aria-hidden', 'true');
+      mark.textContent = item.mark;
+
+      const label = document.createElement('span');
+      label.className = 'stack-node__name';
+      label.textContent = getItemName(item);
+      button.append(mark, label);
+      button.addEventListener('pointerenter', () => setPreview(item));
+      button.addEventListener('pointerleave', () => setPreview(selectedItem ?? item));
+      button.addEventListener('focus', () => {
+        setPreview(item);
+        triggerBurst(button);
+      });
+      button.addEventListener('blur', () => setPreview(selectedItem ?? item));
+      button.addEventListener('click', () => {
+        selectedItem = item;
+        setPreview(item);
+        triggerBurst(button);
+      });
+      button.addEventListener('keydown', (event) => {
+        if (!['ArrowDown', 'ArrowUp', 'ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+        const nodes = [...visual.querySelectorAll<HTMLButtonElement>('[data-stack-item]')];
+        const currentIndex = nodes.indexOf(button);
+        const delta = event.key === 'ArrowDown' || event.key === 'ArrowRight' ? 1 : -1;
+        const targetIndex = event.key === 'Home' ? 0 : event.key === 'End' ? nodes.length - 1 : (currentIndex + delta + nodes.length) % nodes.length;
+        event.preventDefault();
+        nodes[targetIndex]?.focus();
+      });
+      return button;
+    };
+
+    const renderGroup = (group: StackGroup, preferredItem?: StackItem): void => {
+      activeGroup = group;
+      const groupItems = stackItems.filter((item) => item.group === group.id);
+      const halfway = Math.ceil(groupItems.length / 2);
+      leftNodes.replaceChildren(...groupItems.slice(0, halfway).map((item) => createNode(item, 'left')));
+      rightNodes.replaceChildren(...groupItems.slice(halfway).map((item) => createNode(item, 'right')));
+      count.textContent = String(groupItems.length).padStart(2, '0');
+      panel.setAttribute('aria-labelledby', `stack-tab-${group.id}`);
+
+      groupsContainer.querySelectorAll<HTMLButtonElement>('[role="tab"]').forEach((tab) => {
+        const isActive = tab.dataset.stackGroup === group.id;
+        tab.setAttribute('aria-selected', String(isActive));
+        tab.tabIndex = isActive ? 0 : -1;
+      });
+
+      const nextItem = preferredItem && preferredItem.group === group.id
+        ? preferredItem
+        : groupItems[0];
+      if (nextItem) {
+        selectedItem = nextItem;
+        setPreview(nextItem);
+      }
+      drawConnections();
+    };
+
+    const groupTabs = groups.map((group) => {
+      const tab = document.createElement('button');
+      tab.className = 'stack-category';
+      tab.type = 'button';
+      tab.id = `stack-tab-${group.id}`;
+      tab.dataset.stackGroup = group.id;
+      tab.setAttribute('role', 'tab');
+      tab.setAttribute('aria-controls', 'stack-panel');
+      tab.setAttribute('aria-selected', 'false');
+      tab.tabIndex = -1;
+      tab.textContent = translate(group.labelKey);
+      tab.addEventListener('click', () => renderGroup(group));
+      tab.addEventListener('keydown', (event) => {
+        if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+        const currentIndex = groups.findIndex((candidate) => candidate.id === group.id);
+        const targetIndex = event.key === 'Home'
+          ? 0
+          : event.key === 'End'
+            ? groups.length - 1
+            : (currentIndex + (event.key === 'ArrowRight' ? 1 : -1) + groups.length) % groups.length;
+        const targetGroup = groups[targetIndex];
+        if (!targetGroup) return;
+        event.preventDefault();
+        renderGroup(targetGroup);
+        groupsContainer.querySelector<HTMLButtonElement>(`[data-stack-group="${targetGroup.id}"]`)?.focus();
+      });
+      return tab;
+    });
+    groupsContainer.replaceChildren(...groupTabs);
+
+    if (typeof ResizeObserver !== 'undefined') new ResizeObserver(drawConnections).observe(visual);
+    else window.addEventListener('resize', drawConnections);
+
+    visual.addEventListener('pointermove', (event) => {
+      if (event.pointerType === 'touch' || reducedMotion.matches || pointerFrame) return;
+      pointerFrame = window.requestAnimationFrame(() => {
+        pointerFrame = 0;
+        const bounds = visual.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+        core.style.setProperty('--pointer-rx', `${y * -9}deg`);
+        core.style.setProperty('--pointer-ry', `${x * 12}deg`);
+      });
+    });
+    visual.addEventListener('pointerleave', () => {
+      if (pointerFrame) window.cancelAnimationFrame(pointerFrame);
+      pointerFrame = 0;
+      core.style.removeProperty('--pointer-rx');
+      core.style.removeProperty('--pointer-ry');
+    });
+
+    renderGroup(activeGroup, selectedItem);
   }
 
   function initializeGalleries(): void {

@@ -278,16 +278,69 @@
         </div>
 
         <div class="stack-explorer" data-stack data-reveal>
-          <div class="stack-content">
-            <div class="stack-groups" data-stack-groups aria-label="Technologies and skills" data-i18n-aria-label="stackGroupsLabel"></div>
-            <aside class="technology-detail" aria-live="polite" aria-atomic="true" aria-label="Selected item details" data-i18n-aria-label="stackDetailsLabel">
-              <p class="eyebrow" data-detail-group>Development</p>
-              <div class="technology-detail__heading">
-                <span class="technology-detail__mark" data-detail-mark aria-hidden="true">&lt;/&gt;</span>
-                <h3 data-detail-name>HTML5</h3>
+          <div class="stack-lab">
+            <div class="stack-lab__toolbar">
+              <div class="stack-lab__identity">
+                <span class="stack-lab__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span data-i18n="stackLabName">STACK / SYSTEM MAP</span>
               </div>
-              <p class="technology-detail__type" data-detail-type>Web standard</p>
-            </aside>
+              <p class="stack-lab__status"><span class="status-dot" aria-hidden="true"></span><span data-stack-state data-i18n="stackSystemReady" aria-live="polite" aria-atomic="true">System ready</span></p>
+            </div>
+
+            <div class="stack-groups" data-stack-groups role="tablist" aria-label="Technology categories" data-i18n-aria-label="stackGroupsLabel"></div>
+
+            <div class="stack-workbench" data-stack-panel role="tabpanel">
+              <div class="stack-visual" data-stack-visual role="group" aria-label="Connected technology nodes" data-i18n-aria-label="stackVisualLabel">
+                <svg class="stack-visual__connections" data-stack-connections aria-hidden="true"></svg>
+                <div class="stack-visual__burst" data-stack-burst aria-hidden="true"></div>
+                <div class="stack-node-rail stack-node-rail--left" data-stack-nodes-left role="group" aria-label="Technology nodes" data-i18n-aria-label="stackNodeLabel"></div>
+                <div class="stack-core" data-stack-core aria-hidden="true">
+                  <div class="stack-core__orbit stack-core__orbit--outer"></div>
+                  <div class="stack-core__orbit stack-core__orbit--inner"></div>
+                  <div class="stack-core__cube">
+                    <i class="stack-core__face stack-core__face--front"></i>
+                    <i class="stack-core__face stack-core__face--back"></i>
+                    <i class="stack-core__face stack-core__face--right"></i>
+                    <i class="stack-core__face stack-core__face--left"></i>
+                    <i class="stack-core__face stack-core__face--top"></i>
+                    <i class="stack-core__face stack-core__face--bottom"></i>
+                    <span class="stack-core__glyph">&lt;/&gt;</span>
+                  </div>
+                  <span class="stack-core__caption" data-i18n="stackCoreLabel">FULL-STACK</span>
+                </div>
+                <div class="stack-node-rail stack-node-rail--right" data-stack-nodes-right role="group" aria-label="Technology nodes" data-i18n-aria-label="stackNodeLabel"></div>
+                <p class="stack-visual__coordinates" aria-hidden="true">SYS.01 <span>·</span> 0xAC</p>
+              </div>
+
+              <aside class="stack-inspector" aria-label="Selected item details" data-i18n-aria-label="stackDetailsLabel">
+                <div class="stack-inspector__toolbar">
+                  <span class="stack-inspector__file"><span aria-hidden="true">◈</span> <span data-stack-file>html5.html</span></span>
+                  <span class="stack-inspector__dots" aria-hidden="true">•••</span>
+                </div>
+                <div class="stack-inspector__body">
+                  <div class="stack-inspector__meta">
+                    <span data-detail-group>Development &amp; languages</span>
+                    <span data-i18n="stackSyntaxLabel">SYNTAX PREVIEW</span>
+                  </div>
+                  <pre class="stack-code" aria-live="polite" aria-atomic="true"><span class="stack-code__line-numbers" data-stack-line-numbers aria-hidden="true">01</span><code data-stack-code>&lt;main&gt;
+  &lt;!-- build with intent --&gt;
+&lt;/main&gt;</code></pre>
+                  <div class="stack-inspector__selection">
+                    <span class="stack-inspector__mark" data-detail-mark aria-hidden="true">&lt;/&gt;</span>
+                    <div class="stack-inspector__copy">
+                      <h3 data-detail-name>HTML5</h3>
+                      <p data-detail-type>Web standard</p>
+                    </div>
+                    <span class="stack-inspector__signal" aria-hidden="true">↗</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+
+            <div class="stack-lab__footer">
+              <span class="stack-lab__hint"><span aria-hidden="true">↳</span> <span data-i18n="stackExploreHint">Select a node to inspect its syntax</span></span>
+              <span class="stack-lab__count"><span data-stack-count>14</span> <span data-i18n="stackItemsLabel">NODES</span></span>
+            </div>
           </div>
           <p class="stack-note" data-i18n="stackNote">A selection of technologies and skills, not a proficiency scale.</p>
         </div>
