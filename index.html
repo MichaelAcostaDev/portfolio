@@ -17,28 +17,38 @@
 <body>
   <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
 
+  <div class="scroll-progress" aria-hidden="true"><i data-scroll-progress></i></div>
+
   <header class="site-header">
     <a class="wordmark" href="#inicio" aria-label="Michael Acosta, home" data-i18n-aria-label="homeLabel">Michael A<span aria-hidden="true">.</span></a>
     <nav class="navigation" aria-label="Main navigation" data-i18n-aria-label="navigationLabel">
-      <a href="#inicio" data-nav="inicio" data-i18n="navHome">Home</a>
-      <a href="#perfil" data-nav="perfil" data-i18n="navAbout">About</a>
-      <a href="#proyectos" data-nav="proyectos" data-i18n="navProjects">Projects</a>
-      <a href="#stack" data-nav="stack" data-i18n="navStack">Stack</a>
-      <a href="#cv" data-nav="cv" data-i18n="navCv">CV</a>
-      <a href="#contacto" data-nav="contacto" data-i18n="navContact">Contact</a>
+      <a href="#inicio" data-nav="inicio" data-i18n="navHome" data-scramble>Home</a>
+      <a href="#perfil" data-nav="perfil" data-i18n="navAbout" data-scramble>About</a>
+      <a href="#proyectos" data-nav="proyectos" data-i18n="navProjects" data-scramble>Projects</a>
+      <a href="#stack" data-nav="stack" data-i18n="navStack" data-scramble>Stack</a>
+      <a href="#cv" data-nav="cv" data-i18n="navCv" data-scramble>CV</a>
+      <a href="#contacto" data-nav="contacto" data-i18n="navContact" data-scramble>Contact</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero snap-section" id="inicio" data-active-section aria-labelledby="hero-title">
+    <section class="hero snap-section" id="inicio" data-active-section aria-labelledby="hero-title" data-hero>
+      <div class="hero__glyphs" aria-hidden="true">
+        <span class="hero__glyph" data-depth="0.6" style="--gx: 8%; --gy: 22%; --gd: 11s">{ }</span>
+        <span class="hero__glyph" data-depth="1.2" style="--gx: 46%; --gy: 16%; --gd: 14s">&lt;/&gt;</span>
+        <span class="hero__glyph" data-depth="0.9" style="--gx: 58%; --gy: 74%; --gd: 12s">=&gt;</span>
+        <span class="hero__glyph" data-depth="1.6" style="--gx: 86%; --gy: 20%; --gd: 16s">;</span>
+        <span class="hero__glyph" data-depth="0.8" style="--gx: 30%; --gy: 84%; --gd: 13s">01</span>
+        <span class="hero__glyph" data-depth="1.4" style="--gx: 72%; --gy: 90%; --gd: 15s">[ ]</span>
+      </div>
       <div class="page-width hero__layout">
         <div class="hero__content" data-reveal>
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="heroRole">Full-stack Developer &amp; freelancer</span></p>
-          <h1 id="hero-title">Michael<br class="hero__break"> Acosta<span class="hero__period">.</span></h1>
+          <h1 id="hero-title"><span class="hero__word" data-decode>Michael</span><br class="hero__break"> <span class="hero__word" data-decode>Acosta</span><span class="hero__period">.</span></h1>
           <p class="hero__statement" data-i18n="heroStatement">I build useful, clear, thoughtfully crafted web experiences.</p>
-          <a class="text-link hero__link" href="#proyectos"><span data-i18n="heroLink">Explore projects</span><span aria-hidden="true">↓</span></a>
+          <a class="text-link hero__link" href="#proyectos"><span data-i18n="heroLink" data-scramble>Explore projects</span><span aria-hidden="true">↓</span></a>
         </div>
-        <figure class="hero__portrait-wrap" data-reveal>
+        <figure class="hero__portrait-wrap" data-reveal data-parallax="0.5">
           <img class="hero__portrait" src="img/githubProfilePicture.png?v=2026" alt="GitHub profile avatar of Michael Acosta, an illustrated character holding a laptop" data-i18n-alt="portraitAlt" width="460" height="460" fetchpriority="high" decoding="async">
           <figcaption class="hero__portrait-caption"><span data-i18n="portraitCaption">A little corner of my digital world</span><span aria-hidden="true">✳</span></figcaption>
         </figure>
@@ -51,6 +61,10 @@
       <span class="hero__index" data-i18n="heroIndex" aria-hidden="true">PORTFOLIO · SELECTED WORK</span>
     </section>
 
+    <div class="ticker" aria-hidden="true" data-ticker>
+      <div class="ticker__track"><span class="ticker__item">Twistora</span><span class="ticker__sep">✦</span><span class="ticker__item">DevWebCamp</span><span class="ticker__sep">✦</span><span class="ticker__item">Interest Calculator</span><span class="ticker__sep">✦</span><span class="ticker__item">Diabetes Predictor</span><span class="ticker__sep">✦</span><span class="ticker__item">AppSalon</span><span class="ticker__sep">✦</span><span class="ticker__item">TextForge</span><span class="ticker__sep">✦</span><span class="ticker__item">2048</span><span class="ticker__sep">✦</span><span class="ticker__item">Space Invaders</span><span class="ticker__sep">✦</span><span class="ticker__item">Sudoku</span><span class="ticker__sep">✦</span><span class="ticker__item">Snake</span><span class="ticker__sep">✦</span><span class="ticker__item">TypeScript</span><span class="ticker__sep">✦</span><span class="ticker__item">PHP</span><span class="ticker__sep">✦</span><span class="ticker__item">Python</span><span class="ticker__sep">✦</span><span class="ticker__item">Three.js</span><span class="ticker__sep">✦</span><span class="ticker__item">SQL</span><span class="ticker__sep">✦</span><span class="ticker__item">Bash</span><span class="ticker__sep">✦</span><span class="ticker__item">Twistora</span><span class="ticker__sep">✦</span><span class="ticker__item">DevWebCamp</span><span class="ticker__sep">✦</span><span class="ticker__item">Interest Calculator</span><span class="ticker__sep">✦</span><span class="ticker__item">Diabetes Predictor</span><span class="ticker__sep">✦</span><span class="ticker__item">AppSalon</span><span class="ticker__sep">✦</span><span class="ticker__item">TextForge</span><span class="ticker__sep">✦</span><span class="ticker__item">2048</span><span class="ticker__sep">✦</span><span class="ticker__item">Space Invaders</span><span class="ticker__sep">✦</span><span class="ticker__item">Sudoku</span><span class="ticker__sep">✦</span><span class="ticker__item">Snake</span><span class="ticker__sep">✦</span><span class="ticker__item">TypeScript</span><span class="ticker__sep">✦</span><span class="ticker__item">PHP</span><span class="ticker__sep">✦</span><span class="ticker__item">Python</span><span class="ticker__sep">✦</span><span class="ticker__item">Three.js</span><span class="ticker__sep">✦</span><span class="ticker__item">SQL</span><span class="ticker__sep">✦</span><span class="ticker__item">Bash</span><span class="ticker__sep">✦</span></div>
+    </div>
+
     <section class="profile snap-section" id="perfil" data-active-section aria-labelledby="profile-title">
       <div class="page-width profile__inner" data-reveal>
         <div class="profile__copy">
@@ -58,8 +72,8 @@
           <h2 id="profile-title"><span data-i18n="profileRole">Full-stack Developer</span> <span class="profile__connector" data-i18n="profileConjunction">&amp;</span> <span data-i18n="profileFreelancer">freelancer</span></h2>
           <p data-i18n="profileDescription">I’m Michael Acosta. I work across frontend, backend, and data to build web solutions, and I take on client projects as a freelancer. I care about making every part clear, useful, and work well together.</p>
           <div class="profile__links">
-            <a class="text-link" href="#proyectos"><span data-i18n="profileProjects">View projects</span><span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#contacto"><span data-i18n="profileContact">Get in touch</span><span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#proyectos"><span data-i18n="profileProjects" data-scramble>View projects</span><span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#contacto"><span data-i18n="profileContact" data-scramble>Get in touch</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
@@ -67,206 +81,323 @@
 
     <section class="projects snap-section" id="proyectos" data-active-section aria-labelledby="projects-title">
       <div class="page-width">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow" data-i18n="projectsEyebrow">A selection of my work</p>
-          <h2 id="projects-title"><span data-i18n="projectsTitle">Projects</span><span class="hero__period">.</span></h2>
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow" data-i18n="projectsEyebrow">A selection of my work</p>
+            <h2 id="projects-title"><span data-i18n="projectsTitle">Projects</span><span class="hero__period">.</span></h2>
+          </div>
+          <p class="section-heading__hint"><span aria-hidden="true">↳</span> <span data-i18n="projectsHint">Hover a title to preview it</span></p>
         </div>
 
         <div class="project-filters" role="group" aria-label="Filter projects" data-i18n-aria-label="projectFiltersLabel" data-project-filters>
-          <button class="project-filter" type="button" aria-controls="project-list game-collection" aria-pressed="true" data-project-filter="all" data-i18n="filterAll">All</button>
-          <button class="project-filter" type="button" aria-controls="project-list game-collection" aria-pressed="false" data-project-filter="work" data-i18n="filterWork">Web projects</button>
-          <button class="project-filter" type="button" aria-controls="project-list game-collection" aria-pressed="false" data-project-filter="games" data-i18n="filterGames">Games</button>
+          <button class="project-filter" type="button" aria-controls="project-list" aria-pressed="true" data-project-filter="all" data-magnetic data-i18n="filterAll">All</button>
+          <button class="project-filter" type="button" aria-controls="project-list" aria-pressed="false" data-project-filter="work" data-magnetic data-i18n="filterWork">Web projects</button>
+          <button class="project-filter" type="button" aria-controls="project-list" aria-pressed="false" data-project-filter="games" data-magnetic data-i18n="filterGames">Games</button>
         </div>
         <p class="project-filter-status" data-project-filter-status aria-live="polite" aria-atomic="true"></p>
 
-        <div class="project-grid" id="project-list" data-project-list>
-          <article class="project" data-reveal>
-            <a class="project__image" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open the Twistora demo" data-i18n-aria-label="twistoraImageLabel">
-              <img src="img/Twistora%20app.jpg" alt="Twistora stopwatch and 3D cube simulator" data-i18n-alt="twistoraAlt" width="1535" height="863" loading="lazy" decoding="async">
-              <span class="image-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="project__details">
-              <div>
-                <p class="project__number">01</p>
-                <h3>Twistora</h3>
-                <p class="project__description" data-i18n="twistoraDescription">A speedcubing timer paired with a 3D Rubik’s cube simulator.</p>
-              </div>
-              <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/Twistora" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <a class="project__image" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Open the DevWebCamp demo" data-i18n-aria-label="devwebcampImageLabel">
-              <img src="img/devwebcamp%20APP.jpg" alt="DevWebCamp homepage" data-i18n-alt="devwebcampAlt" width="1919" height="1079" loading="lazy" decoding="async">
-              <span class="image-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="project__details">
-              <div>
-                <p class="project__number">02</p>
-                <h3>DevWebCamp</h3>
-                <p class="project__description" data-i18n="devwebcampDescription">A PHP platform for organizing a web development conference.</p>
-              </div>
-              <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/DevWebCamp" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <div class="project__gallery" data-gallery="interest" role="group" aria-label="Interest Calculator screenshots" data-i18n-aria-label="interestGalleryLabel">
-              <div class="project__image">
-                <img data-gallery-image src="img/interest%20calculator%20APP%203.jpg" alt="Interest Calculator balance growth chart" data-i18n-alt="interestAlt1" width="1274" height="634" loading="lazy" decoding="async">
-              </div>
-              <div class="gallery-controls">
-                <button class="gallery-button" type="button" data-gallery-previous aria-label="Previous screenshot" data-i18n-aria-label="previousImage"><span aria-hidden="true">←</span></button>
-                <span class="gallery-status" data-gallery-status aria-live="polite" aria-atomic="true">01 / 04</span>
-                <button class="gallery-button" type="button" data-gallery-next aria-label="Next screenshot" data-i18n-aria-label="nextImage"><span aria-hidden="true">→</span></button>
-              </div>
-            </div>
-            <div class="project__details">
-              <div>
-                <p class="project__number">03</p>
-                <h3>Interest Calculator</h3>
-                <p class="project__description" data-i18n="interestDescription">A visual way to explore simple and compound interest.</p>
-              </div>
-              <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/Interest-Calculator" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://michaelinterestcalculator.netlify.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <a class="project__image" href="https://ml-diabetes-predictor.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the Diabetes Predictor demo" data-i18n-aria-label="diabetesImageLabel">
-              <img src="img/diabetes%20Predictor.jpg" alt="Diabetes Predictor project screenshot" data-i18n-alt="diabetesAlt" width="1536" height="864" loading="lazy" decoding="async">
-              <span class="image-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="project__details">
-              <div>
-                <p class="project__number">04</p>
-                <h3>Diabetes Predictor</h3>
-                <p class="project__description" data-i18n="diabetesDescription">An informational estimate based on biometric data; not a substitute for medical advice.</p>
-              </div>
-              <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/diabetes-prediction-ml" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://ml-diabetes-predictor.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <a class="project__image" href="https://appsalon-phpmvc-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Open the AppSalon demo" data-i18n-aria-label="appSalonImageLabel">
-              <img src="img/appSalon%20APP.jpg" alt="AppSalon appointment and sign-in interface" data-i18n-alt="appSalonAlt" width="1919" height="1079" loading="lazy" decoding="async">
-              <span class="image-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="project__details">
-              <div>
-                <p class="project__number">05</p>
-                <h3>AppSalon</h3>
-                <p class="project__description" data-i18n="appSalonDescription">An appointment management app built with PHP and MVC.</p>
-              </div>
-              <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/app-salon-mvc-php" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://appsalon-phpmvc-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-reveal>
-            <div class="project__gallery" data-gallery="textforge" role="group" aria-label="TextForge screenshots" data-i18n-aria-label="textforgeGalleryLabel">
-              <div class="project__image">
-                <img data-gallery-image src="img/textForge%20CLI%20(3).jpeg" alt="TextForge ASCII banners in different fonts and colors" data-i18n-alt="textforgeAlt1" width="1412" height="549" loading="lazy" decoding="async">
-              </div>
-              <div class="gallery-controls">
-                <button class="gallery-button" type="button" data-gallery-previous aria-label="Previous screenshot" data-i18n-aria-label="previousImage"><span aria-hidden="true">←</span></button>
-                <span class="gallery-status" data-gallery-status aria-live="polite" aria-atomic="true">01 / 04</span>
-                <button class="gallery-button" type="button" data-gallery-next aria-label="Next screenshot" data-i18n-aria-label="nextImage"><span aria-hidden="true">→</span></button>
-              </div>
-            </div>
-            <div class="project__details">
-              <div>
-                <p class="project__number">06</p>
-                <h3>TextForge</h3>
-                <p class="project__description" data-i18n="textforgeDescription">A Bash CLI that generates customizable ASCII banners in the terminal.</p>
-              </div>
-              <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/TextForge" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <section class="game-collection" id="game-collection" aria-labelledby="games-title" data-project-games>
-          <div class="game-collection__heading" data-reveal>
-            <div>
-              <p class="eyebrow" data-i18n="gamesEyebrow">Small worlds, made to play</p>
-              <h3 id="games-title"><span data-i18n="gamesTitle">A few games</span><span class="hero__period">.</span></h3>
-            </div>
-            <span class="game-collection__pixel" aria-hidden="true">✦</span>
-          </div>
-          <article class="game-feature" data-reveal>
-            <a class="game-feature__image" href="https://michael-2048.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play 2048" data-i18n-aria-label="game2048ImageLabel">
-              <img src="img/2048%20app.jpg" alt="2048 number puzzle in progress" data-i18n-alt="game2048Alt" width="1919" height="1079" loading="lazy" decoding="async">
-              <span class="image-arrow" aria-hidden="true">↗</span>
-            </a>
-            <div class="game-feature__details">
-              <div class="game-feature__title">
-                <span class="game-feature__index" data-i18n="featuredGame">FEATURED GAME</span>
-                <h4>2048<span class="hero__period">.</span></h4>
-                <p data-i18n="game2048Description">A familiar number puzzle, thoughtfully brought to the web.</p>
-              </div>
-              <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/2048" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://michael-2048.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-          </article>
-          <div class="game-grid">
-            <article class="game-card" data-reveal>
-              <a class="game-card__image" href="https://space-invaders-enhf.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Play Space Invaders" data-i18n-aria-label="spaceInvadersImageLabel">
-                <img src="img/space%20invaders%20pc.jpg" alt="Space Invaders in-game screen" data-i18n-alt="spaceInvadersAlt" width="1535" height="864" loading="lazy" decoding="async">
-                <span class="image-arrow" aria-hidden="true">↗</span>
-              </a>
-              <div class="game-card__details">
-                <h4>Space Invaders</h4>
-                <div class="project__links">
-                  <a class="text-link" href="https://github.com/MichaelAcostaDev/Space_invaders" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                  <a class="text-link" href="https://space-invaders-enhf.onrender.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
+        <ol class="project-showcase" id="project-list" role="list" data-project-showcase>
+          <li class="project-entry" role="listitem" data-project-entry="twistora" data-category="work">
+            <button class="project-row" type="button" id="project-row-twistora" aria-expanded="false" aria-controls="project-panel-twistora" data-project-row>
+              <span class="project-row__number" aria-hidden="true">01</span>
+              <span class="project-row__name" data-scramble>Twistora</span>
+              <span class="project-row__tags" aria-hidden="true">TypeScript · Three.js</span>
+              <span class="project-row__kind" data-i18n="kindWeb">Web project</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-twistora" role="region" aria-labelledby="project-row-twistora" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">twistora.michaelacostafreelancer.workers.dev</span></div>
+                  <a class="project__image" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open the Twistora demo" data-i18n-aria-label="twistoraImageLabel">
+                    <img src="img/Twistora%20app.jpg" alt="Twistora stopwatch and 3D cube simulator" data-i18n-alt="twistoraAlt" width="1535" height="863" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="twistoraDescription">A speedcubing timer paired with a 3D Rubik’s cube simulator.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>TypeScript</li><li>Three.js</li><li>CSS</li><li>Docker</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/Twistora" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink" data-scramble>Demo</span><span aria-hidden="true">↗</span></a>
+                  </div>
                 </div>
               </div>
-            </article>
-            <article class="game-card" data-reveal>
-              <a class="game-card__image" href="https://michael-sudoku.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play Sudoku" data-i18n-aria-label="sudokuImageLabel">
-                <img src="img/Sudoku%20APP.jpg" alt="Sudoku puzzle application" data-i18n-alt="sudokuAlt" width="1919" height="1079" loading="lazy" decoding="async">
-                <span class="image-arrow" aria-hidden="true">↗</span>
-              </a>
-              <div class="game-card__details">
-                <h4>Sudoku</h4>
-                <div class="project__links">
-                  <a class="text-link" href="https://github.com/MichaelAcostaDev/sudoku" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                  <a class="text-link" href="https://michael-sudoku.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="devwebcamp" data-category="work">
+            <button class="project-row" type="button" id="project-row-devwebcamp" aria-expanded="false" aria-controls="project-panel-devwebcamp" data-project-row>
+              <span class="project-row__number" aria-hidden="true">02</span>
+              <span class="project-row__name" data-scramble>DevWebCamp</span>
+              <span class="project-row__tags" aria-hidden="true">PHP · MVC · SCSS</span>
+              <span class="project-row__kind" data-i18n="kindWeb">Web project</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-devwebcamp" role="region" aria-labelledby="project-row-devwebcamp" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">devwebcamp-michaelacostadev.mnz.dom.my.id</span></div>
+                  <a class="project__image" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Open the DevWebCamp demo" data-i18n-aria-label="devwebcampImageLabel">
+                    <img src="img/devwebcamp%20APP.jpg" alt="DevWebCamp homepage" data-i18n-alt="devwebcampAlt" width="1919" height="1079" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="devwebcampDescription">A PHP platform for organizing a web development conference.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>PHP</li><li>MVC</li><li>MySQL</li><li>SCSS</li><li>JavaScript</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/DevWebCamp" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink" data-scramble>Demo</span><span aria-hidden="true">↗</span></a>
+                  </div>
                 </div>
               </div>
-            </article>
-            <article class="game-card" data-reveal>
-              <a class="game-card__image" href="https://michael-snake.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play Snake" data-i18n-aria-label="snakeImageLabel">
-                <img src="img/Snake%20APP.jpg" alt="Snake game ready to play" data-i18n-alt="snakeAlt" width="1919" height="1079" loading="lazy" decoding="async">
-                <span class="image-arrow" aria-hidden="true">↗</span>
-              </a>
-              <div class="game-card__details">
-                <h4>Snake</h4>
-                <div class="project__links">
-                  <a class="text-link" href="https://github.com/MichaelAcostaDev/snake" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
-                  <a class="text-link" href="https://michael-snake.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="interest" data-category="work">
+            <button class="project-row" type="button" id="project-row-interest" aria-expanded="false" aria-controls="project-panel-interest" data-project-row>
+              <span class="project-row__number" aria-hidden="true">03</span>
+              <span class="project-row__name" data-scramble>Interest Calculator</span>
+              <span class="project-row__tags" aria-hidden="true">TypeScript · Charts</span>
+              <span class="project-row__kind" data-i18n="kindWeb">Web project</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-interest" role="region" aria-labelledby="project-row-interest" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">michaelinterestcalculator.netlify.app</span></div>
+                  <div class="project__gallery" data-gallery="interest" role="group" aria-label="Interest Calculator screenshots" data-i18n-aria-label="interestGalleryLabel">
+                    <div class="project__image">
+                      <img data-gallery-image src="img/interest%20calculator%20APP%203.jpg" alt="Interest Calculator balance growth chart" data-i18n-alt="interestAlt1" width="1274" height="634" loading="lazy" decoding="async">
+                    </div>
+                    <div class="gallery-controls">
+                      <button class="gallery-button" type="button" data-gallery-previous data-magnetic aria-label="Previous screenshot" data-i18n-aria-label="previousImage"><span aria-hidden="true">←</span></button>
+                      <span class="gallery-status" data-gallery-status aria-live="polite" aria-atomic="true">01 / 04</span>
+                      <button class="gallery-button" type="button" data-gallery-next data-magnetic aria-label="Next screenshot" data-i18n-aria-label="nextImage"><span aria-hidden="true">→</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="interestDescription">A visual way to explore simple and compound interest.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>TypeScript</li><li>HTML</li><li>CSS</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/Interest-Calculator" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://michaelinterestcalculator.netlify.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink" data-scramble>Demo</span><span aria-hidden="true">↗</span></a>
+                  </div>
                 </div>
               </div>
-            </article>
-          </div>
-        </section>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="diabetes" data-category="work">
+            <button class="project-row" type="button" id="project-row-diabetes" aria-expanded="false" aria-controls="project-panel-diabetes" data-project-row>
+              <span class="project-row__number" aria-hidden="true">04</span>
+              <span class="project-row__name" data-scramble>Diabetes Predictor</span>
+              <span class="project-row__tags" aria-hidden="true">Python · Machine learning</span>
+              <span class="project-row__kind" data-i18n="kindWeb">Web project</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-diabetes" role="region" aria-labelledby="project-row-diabetes" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">ml-diabetes-predictor.vercel.app</span></div>
+                  <a class="project__image" href="https://ml-diabetes-predictor.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the Diabetes Predictor demo" data-i18n-aria-label="diabetesImageLabel">
+                    <img src="img/diabetes%20Predictor.jpg" alt="Diabetes Predictor project screenshot" data-i18n-alt="diabetesAlt" width="1536" height="864" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="diabetesDescription">An informational estimate based on biometric data; not a substitute for medical advice.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>Python</li><li>Scikit-learn</li><li>Flask</li><li>Docker</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/diabetes-prediction-ml" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://ml-diabetes-predictor.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink" data-scramble>Demo</span><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="appsalon" data-category="work">
+            <button class="project-row" type="button" id="project-row-appsalon" aria-expanded="false" aria-controls="project-panel-appsalon" data-project-row>
+              <span class="project-row__number" aria-hidden="true">05</span>
+              <span class="project-row__name" data-scramble>AppSalon</span>
+              <span class="project-row__tags" aria-hidden="true">PHP · MVC · MySQL</span>
+              <span class="project-row__kind" data-i18n="kindWeb">Web project</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-appsalon" role="region" aria-labelledby="project-row-appsalon" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">appsalon-phpmvc-michaelacostadev.mnz.dom.my.id</span></div>
+                  <a class="project__image" href="https://appsalon-phpmvc-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Open the AppSalon demo" data-i18n-aria-label="appSalonImageLabel">
+                    <img src="img/appSalon%20APP.jpg" alt="AppSalon appointment and sign-in interface" data-i18n-alt="appSalonAlt" width="1919" height="1079" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="appSalonDescription">An appointment management app built with PHP and MVC.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>PHP</li><li>MVC</li><li>MySQL</li><li>SCSS</li><li>JavaScript</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/app-salon-mvc-php" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://appsalon-phpmvc-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink" data-scramble>Demo</span><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="textforge" data-category="work">
+            <button class="project-row" type="button" id="project-row-textforge" aria-expanded="false" aria-controls="project-panel-textforge" data-project-row>
+              <span class="project-row__number" aria-hidden="true">06</span>
+              <span class="project-row__name" data-scramble>TextForge</span>
+              <span class="project-row__tags" aria-hidden="true">Bash · CLI</span>
+              <span class="project-row__kind" data-i18n="kindCli">Command line</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-textforge" role="region" aria-labelledby="project-row-textforge" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">~ $ textforge --help</span></div>
+                  <div class="project__gallery" data-gallery="textforge" role="group" aria-label="TextForge screenshots" data-i18n-aria-label="textforgeGalleryLabel">
+                    <div class="project__image">
+                      <img data-gallery-image src="img/textForge%20CLI%20(3).jpeg" alt="TextForge ASCII banners in different fonts and colors" data-i18n-alt="textforgeAlt1" width="1412" height="549" loading="lazy" decoding="async">
+                    </div>
+                    <div class="gallery-controls">
+                      <button class="gallery-button" type="button" data-gallery-previous data-magnetic aria-label="Previous screenshot" data-i18n-aria-label="previousImage"><span aria-hidden="true">←</span></button>
+                      <span class="gallery-status" data-gallery-status aria-live="polite" aria-atomic="true">01 / 04</span>
+                      <button class="gallery-button" type="button" data-gallery-next data-magnetic aria-label="Next screenshot" data-i18n-aria-label="nextImage"><span aria-hidden="true">→</span></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="textforgeDescription">A Bash CLI that generates customizable ASCII banners in the terminal.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>Bash</li><li>Shell</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/TextForge" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="2048" data-category="games">
+            <button class="project-row" type="button" id="project-row-2048" aria-expanded="false" aria-controls="project-panel-2048" data-project-row>
+              <span class="project-row__number" aria-hidden="true">07</span>
+              <span class="project-row__name" data-scramble>2048</span>
+              <span class="project-row__tags" aria-hidden="true">JavaScript · Puzzle</span>
+              <span class="project-row__kind" data-i18n="kindGame">Game</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-2048" role="region" aria-labelledby="project-row-2048" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">michael-2048.vercel.app</span></div>
+                  <a class="project__image" href="https://michael-2048.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play 2048" data-i18n-aria-label="game2048ImageLabel">
+                    <img src="img/2048%20app.jpg" alt="2048 number puzzle in progress" data-i18n-alt="game2048Alt" width="1919" height="1079" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="game2048Description">A familiar number puzzle, thoughtfully brought to the web.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>JavaScript</li><li>CSS</li><li>HTML</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/2048" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://michael-2048.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink" data-scramble>Play</span><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="space-invaders" data-category="games">
+            <button class="project-row" type="button" id="project-row-space-invaders" aria-expanded="false" aria-controls="project-panel-space-invaders" data-project-row>
+              <span class="project-row__number" aria-hidden="true">08</span>
+              <span class="project-row__name" data-scramble>Space Invaders</span>
+              <span class="project-row__tags" aria-hidden="true">JavaScript · Arcade</span>
+              <span class="project-row__kind" data-i18n="kindGame">Game</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-space-invaders" role="region" aria-labelledby="project-row-space-invaders" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">space-invaders-enhf.onrender.com</span></div>
+                  <a class="project__image" href="https://space-invaders-enhf.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Play Space Invaders" data-i18n-aria-label="spaceInvadersImageLabel">
+                    <img src="img/space%20invaders%20pc.jpg" alt="Space Invaders in-game screen" data-i18n-alt="spaceInvadersAlt" width="1535" height="864" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="spaceInvadersDescription">The arcade classic, rebuilt for the browser with keyboard and touch controls.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>JavaScript</li><li>CSS</li><li>HTML</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/Space_invaders" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://space-invaders-enhf.onrender.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink" data-scramble>Play</span><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="sudoku" data-category="games">
+            <button class="project-row" type="button" id="project-row-sudoku" aria-expanded="false" aria-controls="project-panel-sudoku" data-project-row>
+              <span class="project-row__number" aria-hidden="true">09</span>
+              <span class="project-row__name" data-scramble>Sudoku</span>
+              <span class="project-row__tags" aria-hidden="true">JavaScript · Logic</span>
+              <span class="project-row__kind" data-i18n="kindGame">Game</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-sudoku" role="region" aria-labelledby="project-row-sudoku" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">michael-sudoku.vercel.app</span></div>
+                  <a class="project__image" href="https://michael-sudoku.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play Sudoku" data-i18n-aria-label="sudokuImageLabel">
+                    <img src="img/Sudoku%20APP.jpg" alt="Sudoku puzzle application" data-i18n-alt="sudokuAlt" width="1919" height="1079" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="sudokuDescription">A clean Sudoku board with validation, built to be played on any screen.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>JavaScript</li><li>CSS</li><li>HTML</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/sudoku" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://michael-sudoku.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink" data-scramble>Play</span><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="project-entry" role="listitem" data-project-entry="snake" data-category="games">
+            <button class="project-row" type="button" id="project-row-snake" aria-expanded="false" aria-controls="project-panel-snake" data-project-row>
+              <span class="project-row__number" aria-hidden="true">10</span>
+              <span class="project-row__name" data-scramble>Snake</span>
+              <span class="project-row__tags" aria-hidden="true">JavaScript · Arcade</span>
+              <span class="project-row__kind" data-i18n="kindGame">Game</span>
+              <span class="project-row__arrow" aria-hidden="true">↗</span>
+            </button>
+            <div class="project-panel" id="project-panel-snake" role="region" aria-labelledby="project-row-snake" data-project-panel>
+              <div class="project-panel__inner">
+                <div class="project-panel__frame" data-tilt>
+                  <div class="project-panel__bar"><span class="project-panel__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="project-panel__url">michael-snake.vercel.app</span></div>
+                  <a class="project__image" href="https://michael-snake.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play Snake" data-i18n-aria-label="snakeImageLabel">
+                    <img src="img/Snake%20APP.jpg" alt="Snake game ready to play" data-i18n-alt="snakeAlt" width="1919" height="1079" loading="lazy" decoding="async">
+                    <span class="image-arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="project-panel__details">
+                  <p class="project__description" data-i18n="snakeDescription">The timeless Snake, with keyboard and swipe controls for mobile.</p>
+                  <ul class="project-tags" aria-label="Technologies" data-i18n-aria-label="projectTagsLabel"><li>JavaScript</li><li>CSS</li><li>HTML</li></ul>
+                  <div class="project__links">
+                    <a class="text-link" href="https://github.com/MichaelAcostaDev/snake" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink" data-scramble>Code</span><span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="https://michael-snake.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink" data-scramble>Play</span><span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
@@ -378,16 +509,53 @@
         <h2 id="contact-title"><span data-i18n="contactTitle">Have something<br>in mind</span><span class="hero__period">?</span></h2>
         <a class="contact__email" href="mailto:michaelacostadev@gmail.com">michaelacostadev@gmail.com <span aria-hidden="true">↗</span></a>
         <div class="contact__profiles">
-          <a class="text-link" href="https://github.com/MichaelAcostaDev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="https://www.linkedin.com/in/michael-acosta-dev/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/MichaelAcostaDev" target="_blank" rel="noopener noreferrer"><span data-scramble>GitHub</span> <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://www.linkedin.com/in/michael-acosta-dev/" target="_blank" rel="noopener noreferrer"><span data-scramble>LinkedIn</span> <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
 
+  <div class="mascot" data-mascot aria-live="polite">
+    <div class="mascot__bubble" data-mascot-bubble role="status">
+      <span class="mascot__text" data-mascot-text>Hi! Welcome.</span>
+      <span class="mascot__caret" aria-hidden="true"></span>
+    </div>
+    <button class="mascot__body" type="button" data-mascot-button aria-label="Portfolio bot: say something" data-i18n-aria-label="mascotLabel">
+      <svg class="mascot__svg" viewBox="0 0 32 36" shape-rendering="crispEdges" aria-hidden="true">
+        <rect class="mascot__antenna-light" x="14" y="0" width="4" height="2" fill="#41a1cf"/>
+        <rect x="15" y="2" width="2" height="3" fill="#282834"/>
+        <rect x="6" y="5" width="20" height="16" rx="2" fill="#282834"/>
+        <rect x="8" y="7" width="16" height="12" rx="1" fill="#fefffc"/>
+        <g class="mascot__eyes">
+          <g class="mascot__pupils">
+            <rect x="11" y="10" width="3" height="4" fill="#282834"/>
+            <rect x="18" y="10" width="3" height="4" fill="#282834"/>
+          </g>
+        </g>
+        <g class="mascot__mouth">
+          <rect x="12" y="15" width="1" height="1" fill="#41a1cf"/>
+          <rect x="13" y="16" width="6" height="1" fill="#41a1cf"/>
+          <rect x="19" y="15" width="1" height="1" fill="#41a1cf"/>
+        </g>
+        <rect x="9" y="22" width="14" height="10" rx="1" fill="#282834"/>
+        <rect class="mascot__chest" x="14" y="25" width="4" height="3" fill="#41a1cf"/>
+        <rect x="5" y="23" width="3" height="7" fill="#282834"/>
+        <g class="mascot__arm">
+          <rect x="24" y="16" width="3" height="8" fill="#282834"/>
+          <rect x="24" y="14" width="3" height="2" fill="#fefffc"/>
+        </g>
+        <rect x="11" y="32" width="3" height="3" fill="#646464"/>
+        <rect x="18" y="32" width="3" height="3" fill="#646464"/>
+      </svg>
+      <span class="mascot__shadow" aria-hidden="true"></span>
+    </button>
+  </div>
+
   <footer class="site-footer">
     <div class="page-width site-footer__inner">
       <span data-i18n="footerName">Michael Acosta</span>
+      <span class="site-footer__clock"><span class="status-dot" aria-hidden="true"></span><span data-i18n="footerLocalTime">Local time</span> <time data-local-time>--:--:--</time></span>
       <span><span data-i18n="footerCopyright">©</span> <span data-current-year>2026</span></span>
     </div>
   </footer>
