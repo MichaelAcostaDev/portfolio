@@ -31,11 +31,17 @@
 
   <main id="main">
     <section class="hero snap-section" id="inicio" data-active-section aria-labelledby="hero-title">
-      <div class="page-width hero__content" data-reveal>
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="heroRole">Full-stack Developer &amp; freelancer</span></p>
-        <h1 id="hero-title">Michael<br class="hero__break"> Acosta<span class="hero__period">.</span></h1>
-        <p class="hero__statement" data-i18n="heroStatement">I build useful, clear, thoughtfully crafted web experiences.</p>
-        <a class="text-link hero__link" href="#proyectos"><span data-i18n="heroLink">Explore projects</span><span aria-hidden="true">↓</span></a>
+      <div class="page-width hero__layout">
+        <div class="hero__content" data-reveal>
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="heroRole">Full-stack Developer &amp; freelancer</span></p>
+          <h1 id="hero-title">Michael<br class="hero__break"> Acosta<span class="hero__period">.</span></h1>
+          <p class="hero__statement" data-i18n="heroStatement">I build useful, clear, thoughtfully crafted web experiences.</p>
+          <a class="text-link hero__link" href="#proyectos"><span data-i18n="heroLink">Explore projects</span><span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="hero__portrait-wrap" data-reveal>
+          <img class="hero__portrait" src="img/githubProfilePicture.png?v=2026" alt="GitHub profile avatar of Michael Acosta, an illustrated character holding a laptop" data-i18n-alt="portraitAlt" width="460" height="460" fetchpriority="high" decoding="async">
+          <figcaption class="hero__portrait-caption"><span data-i18n="portraitCaption">A little corner of my digital world</span><span aria-hidden="true">✳</span></figcaption>
+        </figure>
       </div>
       <svg class="pixel-flower" viewBox="0 0 32 32" shape-rendering="crispEdges" aria-hidden="true">
         <path fill="#41a1cf" d="M12 2h8v6h6v8h-6v8h-8v-8H6V8h6z"/>
@@ -56,7 +62,6 @@
             <a class="text-link" href="#contacto"><span data-i18n="profileContact">Get in touch</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <img class="profile__portrait" src="img/githubProfilePicture.png?v=2026" alt="GitHub profile avatar of Michael Acosta, an illustrated character holding a laptop" data-i18n-alt="portraitAlt" width="460" height="460" loading="lazy" decoding="async">
       </div>
     </section>
 
@@ -67,7 +72,14 @@
           <h2 id="projects-title"><span data-i18n="projectsTitle">Projects</span><span class="hero__period">.</span></h2>
         </div>
 
-        <div class="project-grid">
+        <div class="project-filters" role="group" aria-label="Filter projects" data-i18n-aria-label="projectFiltersLabel" data-project-filters>
+          <button class="project-filter" type="button" aria-controls="project-list game-collection" aria-pressed="true" data-project-filter="all" data-i18n="filterAll">All</button>
+          <button class="project-filter" type="button" aria-controls="project-list game-collection" aria-pressed="false" data-project-filter="work" data-i18n="filterWork">Web projects</button>
+          <button class="project-filter" type="button" aria-controls="project-list game-collection" aria-pressed="false" data-project-filter="games" data-i18n="filterGames">Games</button>
+        </div>
+        <p class="project-filter-status" data-project-filter-status aria-live="polite" aria-atomic="true"></p>
+
+        <div class="project-grid" id="project-list" data-project-list>
           <article class="project" data-reveal>
             <a class="project__image" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open the Twistora demo" data-i18n-aria-label="twistoraImageLabel">
               <img src="img/Twistora%20app.jpg" alt="Twistora stopwatch and 3D cube simulator" data-i18n-alt="twistoraAlt" width="1535" height="863" loading="lazy" decoding="async">
@@ -188,7 +200,7 @@
           </article>
         </div>
 
-        <section class="game-collection" aria-labelledby="games-title">
+        <section class="game-collection" id="game-collection" aria-labelledby="games-title" data-project-games>
           <div class="game-collection__heading" data-reveal>
             <div>
               <p class="eyebrow" data-i18n="gamesEyebrow">Small worlds, made to play</p>
@@ -313,8 +325,8 @@
         <h2 id="contact-title"><span data-i18n="contactTitle">Have something<br>in mind</span><span class="hero__period">?</span></h2>
         <a class="contact__email" href="mailto:michaelacostadev@gmail.com">michaelacostadev@gmail.com <span aria-hidden="true">↗</span></a>
         <div class="contact__profiles">
-          <a class="text-link" href="https://github.com/MichaelAcostaDev">GitHub <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="https://www.linkedin.com/in/michael-acosta-dev/">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/MichaelAcostaDev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://www.linkedin.com/in/michael-acosta-dev/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>

@@ -18,6 +18,7 @@
             heroStatement: 'I build useful, clear, thoughtfully crafted web experiences.',
             heroLink: 'Explore projects',
             heroIndex: 'PORTFOLIO · SELECTED WORK',
+            portraitCaption: 'GITHUB / @MichaelAcostaDev',
             profileEyebrow: 'A little about me',
             profileRole: 'Full-stack Developer',
             profileConjunction: '&',
@@ -28,6 +29,13 @@
             portraitAlt: 'Michael Acosta’s GitHub profile avatar: an illustrated character holding a laptop',
             projectsEyebrow: 'A selection of my work',
             projectsTitle: 'Projects',
+            projectFiltersLabel: 'Filter projects',
+            filterAll: 'All',
+            filterWork: 'Web projects',
+            filterGames: 'Games',
+            filterStatusAll: 'Showing all projects and games',
+            filterStatusWork: 'Showing web projects',
+            filterStatusGames: 'Showing games',
             codeLink: 'Code',
             demoLink: 'Demo',
             twistoraImageLabel: 'Open the Twistora demo',
@@ -142,6 +150,7 @@
             heroStatement: 'Creo experiencias web útiles, claras y cuidadas.',
             heroLink: 'Explorar proyectos',
             heroIndex: 'PORTAFOLIO · TRABAJOS SELECCIONADOS',
+            portraitCaption: 'GITHUB / @MichaelAcostaDev',
             profileEyebrow: 'Un poco sobre mí',
             profileRole: 'Desarrollador Full-stack',
             profileConjunction: 'y',
@@ -152,6 +161,13 @@
             portraitAlt: 'Avatar de GitHub de Michael Acosta: una ilustración de una persona con una laptop',
             projectsEyebrow: 'Una selección de mi trabajo',
             projectsTitle: 'Proyectos',
+            projectFiltersLabel: 'Filtrar proyectos',
+            filterAll: 'Todos',
+            filterWork: 'Proyectos web',
+            filterGames: 'Juegos',
+            filterStatusAll: 'Mostrando todos los proyectos y juegos',
+            filterStatusWork: 'Mostrando proyectos web',
+            filterStatusGames: 'Mostrando juegos',
             codeLink: 'Código',
             demoLink: 'Demo',
             twistoraImageLabel: 'Abrir la demo de Twistora',
@@ -318,12 +334,10 @@
             { src: 'img/textForge%20CLI%20(2).jpeg', altKey: 'textforgeAlt4', width: 658, height: 593 }
         ]
     };
-    const preferredLanguages = typeof navigator === 'undefined'
-        ? []
-        : [...(navigator.languages ?? []), navigator.language ?? ''];
-    const language = preferredLanguages.some((candidate) => candidate.toLowerCase().split('-')[0] === 'es')
-        ? 'es'
-        : 'en';
+    const primaryLanguage = typeof navigator === 'undefined'
+        ? ''
+        : (navigator.languages?.[0] || navigator.language || '').toLowerCase().split('-')[0];
+    const language = primaryLanguage === 'es' ? 'es' : 'en';
     function translate(key) {
         const localized = translations[language][key];
         if (localized === undefined)
@@ -375,19 +389,60 @@
     function initializeNavigation() {
         if (!('IntersectionObserver' in window))
             return;
+        const visibleSections = new Set();
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (!entry.isIntersecting)
-                    return;
-                navigationLinks.forEach((link, id) => {
-                    if (id === entry.target.id)
-                        link.setAttribute('aria-current', 'location');
-                    else
-                        link.removeAttribute('aria-current');
-                });
+                if (entry.isIntersecting)
+                    visibleSections.add(entry.target.id);
+                else
+                    visibleSections.delete(entry.target.id);
+            });
+            const activeSection = [...visibleSections]
+                .map((id) => document.getElementById(id))
+                .filter((section) => section !== null)
+                .sort((first, second) => {
+                const viewportCenter = window.innerHeight / 2;
+                const firstRect = first.getBoundingClientRect();
+                const secondRect = second.getBoundingClientRect();
+                const firstCenter = firstRect.top + firstRect.height / 2;
+                const secondCenter = secondRect.top + secondRect.height / 2;
+                return Math.abs(firstCenter - viewportCenter) - Math.abs(secondCenter - viewportCenter);
+            })[0];
+            if (!activeSection)
+                return;
+            navigationLinks.forEach((link, id) => {
+                if (id === activeSection.id)
+                    link.setAttribute('aria-current', 'location');
+                else
+                    link.removeAttribute('aria-current');
             });
         }, { rootMargin: '-30% 0px -60% 0px' });
         sectionObserverTargets.forEach((section) => sectionObserver.observe(section));
+    }
+    function initializeProjectFilters() {
+        const filterGroup = document.querySelector('[data-project-filters]');
+        const projectList = document.querySelector('[data-project-list]');
+        const gameCollection = document.querySelector('[data-project-games]');
+        const status = document.querySelector('[data-project-filter-status]');
+        if (!filterGroup || !projectList || !gameCollection || !status)
+            return;
+        status.textContent = translate('filterStatusAll');
+        filterGroup.querySelectorAll('[data-project-filter]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.projectFilter;
+                if (filter !== 'all' && filter !== 'work' && filter !== 'games')
+                    return;
+                projectList.hidden = filter === 'games';
+                gameCollection.hidden = filter === 'work';
+                filterGroup.querySelectorAll('[data-project-filter]').forEach((filterButton) => {
+                    filterButton.setAttribute('aria-pressed', String(filterButton === button));
+                });
+                const statusKey = filter === 'all'
+                    ? 'filterStatusAll'
+                    : filter === 'work' ? 'filterStatusWork' : 'filterStatusGames';
+                status.textContent = translate(statusKey);
+            });
+        });
     }
     function initializeStack() {
         const root = document.querySelector('[data-stack]');
@@ -500,6 +555,7 @@
     applyTranslations();
     initializeReveals();
     initializeNavigation();
+    initializeProjectFilters();
     initializeStack();
     initializeGalleries();
 })();
