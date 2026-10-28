@@ -42,7 +42,7 @@
         <path fill="#282834" d="M14 10h4v4h4v4h-4v4h-4v-4h-4v-4h4z"/>
         <path fill="#646464" d="M14 22h4v6h-4zM10 26h4v2h-4zM18 26h4v2h-4z"/>
       </svg>
-      <span class="hero__index" aria-hidden="true">PORTFOLIO · 2026</span>
+      <span class="hero__index" data-i18n="heroIndex" aria-hidden="true">PORTFOLIO · SELECTED WORK</span>
     </section>
 
     <section class="profile snap-section" id="perfil" data-active-section aria-labelledby="profile-title">
@@ -56,7 +56,7 @@
             <a class="text-link" href="#contacto"><span data-i18n="profileContact">Get in touch</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <img class="profile__portrait" src="img/LinkedIn%20Profile%20Picture.png" alt="Portrait of Michael Acosta" data-i18n-alt="portraitAlt" width="768" height="1024" loading="lazy" decoding="async">
+        <img class="profile__portrait" src="img/githubProfilePicture.png?v=2026" alt="GitHub profile avatar of Michael Acosta, an illustrated character holding a laptop" data-i18n-alt="portraitAlt" width="460" height="460" loading="lazy" decoding="async">
       </div>
     </section>
 
@@ -147,6 +147,24 @@
           </article>
 
           <article class="project" data-reveal>
+            <a class="project__image" href="https://appsalon-phpmvc-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Open the AppSalon demo" data-i18n-aria-label="appSalonImageLabel">
+              <img src="img/appSalon%20APP.jpg" alt="AppSalon appointment and sign-in interface" data-i18n-alt="appSalonAlt" width="1919" height="1079" loading="lazy" decoding="async">
+              <span class="image-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="project__details">
+              <div>
+                <p class="project__number">05</p>
+                <h3>AppSalon</h3>
+                <p class="project__description" data-i18n="appSalonDescription">An appointment management app built with PHP and MVC.</p>
+              </div>
+              <div class="project__links">
+                <a class="text-link" href="https://github.com/MichaelAcostaDev/app-salon-mvc-php" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://appsalon-phpmvc-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
             <div class="project__gallery" data-gallery="textforge" role="group" aria-label="TextForge screenshots" data-i18n-aria-label="textforgeGalleryLabel">
               <div class="project__image">
                 <img data-gallery-image src="img/textForge%20CLI%20(3).jpeg" alt="TextForge ASCII banners in different fonts and colors" data-i18n-alt="textforgeAlt1" width="1412" height="549" loading="lazy" decoding="async">
@@ -159,7 +177,7 @@
             </div>
             <div class="project__details">
               <div>
-                <p class="project__number">05</p>
+                <p class="project__number">06</p>
                 <h3>TextForge</h3>
                 <p class="project__description" data-i18n="textforgeDescription">A Bash CLI that generates customizable ASCII banners in the terminal.</p>
               </div>
@@ -169,6 +187,74 @@
             </div>
           </article>
         </div>
+
+        <section class="game-collection" aria-labelledby="games-title">
+          <div class="game-collection__heading" data-reveal>
+            <div>
+              <p class="eyebrow" data-i18n="gamesEyebrow">Small worlds, made to play</p>
+              <h3 id="games-title"><span data-i18n="gamesTitle">A few games</span><span class="hero__period">.</span></h3>
+            </div>
+            <span class="game-collection__pixel" aria-hidden="true">✦</span>
+          </div>
+          <article class="game-feature" data-reveal>
+            <a class="game-feature__image" href="https://michael-2048.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play 2048" data-i18n-aria-label="game2048ImageLabel">
+              <img src="img/2048%20app.jpg" alt="2048 number puzzle in progress" data-i18n-alt="game2048Alt" width="1919" height="1079" loading="lazy" decoding="async">
+              <span class="image-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="game-feature__details">
+              <div class="game-feature__title">
+                <span class="game-feature__index" data-i18n="featuredGame">FEATURED GAME</span>
+                <h4>2048<span class="hero__period">.</span></h4>
+                <p data-i18n="game2048Description">A familiar number puzzle, thoughtfully brought to the web.</p>
+              </div>
+              <div class="project__links">
+                <a class="text-link" href="https://github.com/MichaelAcostaDev/2048" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://michael-2048.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <div class="game-grid">
+            <article class="game-card" data-reveal>
+              <a class="game-card__image" href="https://space-invaders-enhf.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Play Space Invaders" data-i18n-aria-label="spaceInvadersImageLabel">
+                <img src="img/space%20invaders%20pc.jpg" alt="Space Invaders in-game screen" data-i18n-alt="spaceInvadersAlt" width="1535" height="864" loading="lazy" decoding="async">
+                <span class="image-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="game-card__details">
+                <h4>Space Invaders</h4>
+                <div class="project__links">
+                  <a class="text-link" href="https://github.com/MichaelAcostaDev/Space_invaders" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                  <a class="text-link" href="https://space-invaders-enhf.onrender.com/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="game-card" data-reveal>
+              <a class="game-card__image" href="https://michael-sudoku.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play Sudoku" data-i18n-aria-label="sudokuImageLabel">
+                <img src="img/Sudoku%20APP.jpg" alt="Sudoku puzzle application" data-i18n-alt="sudokuAlt" width="1919" height="1079" loading="lazy" decoding="async">
+                <span class="image-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="game-card__details">
+                <h4>Sudoku</h4>
+                <div class="project__links">
+                  <a class="text-link" href="https://github.com/MichaelAcostaDev/sudoku" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                  <a class="text-link" href="https://michael-sudoku.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="game-card" data-reveal>
+              <a class="game-card__image" href="https://michael-snake.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Play Snake" data-i18n-aria-label="snakeImageLabel">
+                <img src="img/Snake%20APP.jpg" alt="Snake game ready to play" data-i18n-alt="snakeAlt" width="1919" height="1079" loading="lazy" decoding="async">
+                <span class="image-arrow" aria-hidden="true">↗</span>
+              </a>
+              <div class="game-card__details">
+                <h4>Snake</h4>
+                <div class="project__links">
+                  <a class="text-link" href="https://github.com/MichaelAcostaDev/snake" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                  <a class="text-link" href="https://michael-snake.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="playLink">Play</span><span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -189,8 +275,6 @@
                 <h3 data-detail-name>HTML5</h3>
               </div>
               <p class="technology-detail__type" data-detail-type>Web standard</p>
-              <p class="technology-detail__description" data-detail-description>Semantic structure for web interfaces and applications.</p>
-              <a class="text-link technology-detail__project" data-detail-project href="https://github.com/MichaelAcostaDev/Twistora" target="_blank" rel="noopener noreferrer"><span data-i18n="exploreProject">Explore in Twistora</span><span aria-hidden="true">↗</span></a>
             </aside>
           </div>
           <p class="stack-note" data-i18n="stackNote">A selection of technologies and skills, not a proficiency scale.</p>
@@ -217,7 +301,15 @@
 
     <section class="contact snap-section" id="contacto" data-active-section aria-labelledby="contact-title">
       <div class="page-width contact__inner" data-reveal>
-        <p class="eyebrow" data-i18n="contactEyebrow">Let’s talk</p>
+        <div class="contact__eyebrow">
+          <p class="eyebrow" data-i18n="contactEyebrow">Let’s talk</p>
+          <svg class="contact__pixel" viewBox="0 0 32 32" shape-rendering="crispEdges" aria-hidden="true">
+            <path fill="#dee2de" d="M4 7h24v18H4z"/>
+            <path fill="#fff" d="M7 10h18v12H7z"/>
+            <path fill="#41a1cf" d="M7 10h4v4H7zM11 14h4v4h-4zM15 18h4v4h-4zM19 14h4v4h-4zM23 10h4v4h-4z"/>
+            <path fill="#282834" d="M12 25h8v3h-8z"/>
+          </svg>
+        </div>
         <h2 id="contact-title"><span data-i18n="contactTitle">Have something<br>in mind</span><span class="hero__period">?</span></h2>
         <a class="contact__email" href="mailto:michaelacostadev@gmail.com">michaelacostadev@gmail.com <span aria-hidden="true">↗</span></a>
         <div class="contact__profiles">

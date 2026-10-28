@@ -444,18 +444,154 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
 
 .profile__portrait {
   width: 220px;
-  height: 260px;
+  height: 220px;
   justify-self: end;
   border: 1px solid var(--mist);
-  border-radius: 12px;
+  border-radius: 50%;
   background: var(--linen);
   object-fit: cover;
-  object-position: center 24%;
+  object-position: center;
 }
 
 .project__gallery { min-width: 0; }
 .project__gallery .project__image { background: var(--linen); }
 .project__gallery img { object-fit: contain; }
+
+.game-collection {
+  margin-top: clamp(72px, 9vw, 112px);
+  padding-top: clamp(38px, 6vw, 68px);
+  border-top: 1px solid var(--mist);
+}
+
+.game-collection__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.game-collection__heading h3 {
+  margin-top: 8px;
+  color: var(--graphite);
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.game-collection__pixel {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid var(--mist);
+  border-radius: 8px;
+  background: var(--linen);
+  color: var(--signal-blue);
+  font-size: 19px;
+  image-rendering: pixelated;
+}
+
+.game-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(230px, 0.55fr);
+  overflow: hidden;
+  border: 1px solid var(--mist);
+  border-radius: 12px;
+  background: var(--linen);
+}
+
+.game-feature__image, .game-card__image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--mist);
+  background: var(--paper);
+  text-decoration: none;
+}
+
+.game-feature__image {
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  border-width: 0 1px 0 0;
+}
+
+.game-feature__image img, .game-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 450ms cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+.game-feature__image:hover img, .game-card__image:hover img { transform: scale(1.025); }
+.game-feature__image:hover .image-arrow, .game-card__image:hover .image-arrow,
+.game-feature__image:focus-visible .image-arrow, .game-card__image:focus-visible .image-arrow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.game-feature__details {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: clamp(22px, 4vw, 44px);
+}
+
+.game-feature__index {
+  color: var(--ash);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.game-feature__title h4 {
+  margin-top: 16px;
+  color: var(--graphite);
+  font-family: var(--font-display);
+  font-size: clamp(54px, 8vw, 94px);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+}
+
+.game-feature__title > p {
+  max-width: 28ch;
+  margin-top: 14px;
+  color: var(--ash);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 26px;
+}
+
+.game-card { min-width: 0; }
+.game-card__image { aspect-ratio: 16 / 9; border-radius: 10px; }
+.game-card__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+}
+.game-card__details h4 {
+  min-width: 0;
+  color: var(--graphite);
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2.2vw, 25px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+.game-card .project__links { gap: 10px; }
+.game-card .project__links .text-link { min-height: 36px; font-size: 12px; }
 
 .gallery-controls {
   display: flex;
@@ -481,7 +617,7 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
   transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 .gallery-button:hover { border-color: var(--signal-blue); color: var(--signal-blue); }
-.gallery-button:focus-visible, .stack-category:focus-visible, .technology:focus-visible {
+.gallery-button:focus-visible, .technology:focus-visible {
   outline: 2px solid var(--signal-blue);
   outline-offset: 3px;
 }
@@ -509,9 +645,8 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
 
 .stack-content {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
-  align-items: start;
-  gap: clamp(20px, 3vw, 36px);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
   padding: clamp(20px, 4vw, 38px);
 }
 
@@ -524,13 +659,11 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
 
 .stack-group {
   min-width: 0;
-  padding: 16px;
-  border: 1px solid var(--mist);
-  border-radius: 10px;
-  background: var(--paper);
+  padding: 18px 12px 12px;
+  border-top: 1px solid var(--mist);
 }
 .stack-group--development { grid-column: 1 / -1; }
-.stack-group--linux { background: var(--linen); }
+.stack-group--linux .technology__mark { border-radius: 50%; }
 
 .stack-group__title {
   display: flex;
@@ -556,12 +689,6 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
   background: var(--paper);
   color: var(--signal-blue);
   font: 600 11px/1 var(--font-sans);
-}
-
-.stack-group__note {
-  margin: -5px 0 11px;
-  color: var(--ash);
-  font-size: 12px;
 }
 
 .technology-list {
@@ -619,38 +746,34 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
 
 .technology-detail {
   display: flex;
-  position: sticky;
-  top: calc(var(--header-height) + 22px);
   min-width: 0;
-  min-height: 260px;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: clamp(20px, 3vw, 30px);
-  border: 1px solid var(--mist);
-  border-radius: 12px;
-  background: var(--linen);
+  min-height: 74px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 12px 0;
+  border-top: 1px solid var(--mist);
 }
 
-.technology-detail .eyebrow { font-size: 12px; }
+.technology-detail .eyebrow { flex: 0 0 auto; font-size: 11px; }
 .technology-detail__heading {
   display: flex;
+  min-width: 0;
   align-items: center;
-  gap: 16px;
-  margin-top: 22px;
+  gap: 10px;
 }
 
 .technology-detail__mark {
   display: grid;
-  width: 56px;
-  height: 56px;
+  width: 38px;
+  height: 38px;
   flex: none;
   place-items: center;
   border: 1px solid var(--mist);
-  border-radius: 12px;
+  border-radius: 7px;
   background: var(--paper);
   color: var(--signal-blue);
   font-family: var(--font-display);
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: -0.05em;
 }
 
@@ -658,7 +781,7 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
   min-width: 0;
   color: var(--graphite);
   font-family: var(--font-display);
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: clamp(20px, 2.5vw, 27px);
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 1.1;
@@ -666,21 +789,13 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
 }
 
 .technology-detail__type {
-  margin-top: 8px;
+  min-width: 0;
+  margin-left: auto;
   color: var(--ash);
   font-size: 12px;
+  text-align: right;
 }
 
-.technology-detail__description {
-  max-width: 42ch;
-  margin-top: 18px;
-  color: var(--ash);
-  font-size: 14px;
-  line-height: 1.55;
-}
-
-.technology-detail__project { margin-top: auto; padding-top: 14px; }
-.technology-detail__project[hidden] { display: none; }
 .stack-note { padding: 0 20px 17px; color: var(--ash); font-size: 12px; }
 
 .cv-section {
@@ -720,6 +835,18 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
   transition: transform 180ms ease;
 }
 .cv-card:hover .cv-pixel-document { transform: translateY(-3px); }
+
+.contact__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact__pixel {
+  width: 30px;
+  height: 30px;
+  image-rendering: pixelated;
+}
 
 .cv-card__status {
   margin-top: 14px;
@@ -774,25 +901,34 @@ a:focus-visible { outline: 2px solid var(--signal-blue); outline-offset: 4px; }
 
 @media (max-width: 759px) {
   .profile__inner { grid-template-columns: minmax(0, 1fr) 180px; gap: 28px; }
-  .profile__portrait { width: 180px; height: 230px; }
-  .stack-content { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .profile__portrait { width: 180px; height: 180px; }
   .technology-detail { position: static; }
-  .technology-detail { min-height: 220px; }
+  .game-feature { grid-template-columns: minmax(0, 1fr); }
+  .game-feature__image { border-width: 0 0 1px; }
+  .game-feature__details { min-height: 220px; }
 }
 
 @media (max-width: 520px) {
   .profile { padding-block: 72px; }
   .profile__inner { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .profile__copy h2 { font-size: 38px; }
-  .profile__portrait { width: 100%; height: clamp(200px, 58vw, 280px); object-position: center 28%; }
+  .profile__portrait { width: min(100%, 240px); height: auto; aspect-ratio: 1; justify-self: start; object-position: center; }
   .stack-content { gap: 20px; padding: 16px; }
   .stack-groups { grid-template-columns: minmax(0, 1fr); }
   .stack-group--development { grid-column: auto; }
   .technology-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .technology { min-height: 48px; gap: 7px; padding: 6px; font-size: 11px; }
   .technology__mark { width: 30px; height: 30px; font-size: 13px; }
-  .technology-detail { min-height: 214px; padding: 20px; }
   .stack-note { padding-inline: 16px; line-height: 1.45; }
+  .technology-detail { min-height: 0; flex-wrap: wrap; gap: 10px; padding-inline: 4px; }
+  .technology-detail .eyebrow { width: 100%; }
+  .technology-detail__type { margin-left: auto; }
+  .game-collection { margin-top: 64px; }
+  .game-collection__heading { margin-bottom: 22px; }
+  .game-feature__details { min-height: 190px; padding: 22px; }
+  .game-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; margin-top: 24px; }
+  .game-card__details h4 { font-size: 24px; }
+  .game-card .project__links .text-link { font-size: 12px; }
   .cv-card { min-height: 146px; }
   .cv-card h2 { font-size: clamp(29px, 8vw, 39px); }
   .cv-pixel-document { width: 66px; height: 76px; }
