@@ -1,165 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fefffc">
-  <meta name="description" content="Portafolio de Michael Acosta, desarrollador full-stack. Proyectos web reales y sus demos.">
+  <meta name="description" content="Michael Acosta's portfolio: full-stack developer, freelancer, and real web projects." data-i18n-content="metaDescription">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Michael Acosta — Desarrollador full-stack">
-  <meta property="og:description" content="Proyectos web reales, hechos por Michael Acosta.">
+  <meta property="og:title" content="Michael Acosta — Full-stack Developer" data-i18n-content="pageTitle">
+  <meta property="og:description" content="Real web projects by Michael Acosta." data-i18n-content="metaDescription">
   <meta name="twitter:card" content="summary">
-  <title>Michael Acosta — Desarrollador full-stack</title>
+  <title data-i18n="pageTitle">Michael Acosta — Full-stack Developer</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f1f29'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia' font-size='18' fill='%23fefffc'%3EM%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
 
   <header class="site-header">
-    <a class="wordmark" href="#inicio" aria-label="Michael Acosta, inicio">Michael A<span aria-hidden="true">.</span></a>
-    <nav class="navigation" aria-label="Navegación principal">
-      <a href="#inicio" data-nav="inicio">Inicio</a>
-      <a href="#perfil" data-nav="perfil">Sobre mí</a>
-      <a href="#proyectos" data-nav="proyectos">Proyectos</a>
-      <a href="#stack" data-nav="stack">Stack</a>
-      <a href="#cv" data-nav="cv">CV</a>
-      <a href="#contacto" data-nav="contacto">Contacto</a>
+    <a class="wordmark" href="#inicio" aria-label="Michael Acosta, home" data-i18n-aria-label="homeLabel">Michael A<span aria-hidden="true">.</span></a>
+    <nav class="navigation" aria-label="Main navigation" data-i18n-aria-label="navigationLabel">
+      <a href="#inicio" data-nav="inicio" data-i18n="navHome">Home</a>
+      <a href="#perfil" data-nav="perfil" data-i18n="navAbout">About</a>
+      <a href="#proyectos" data-nav="proyectos" data-i18n="navProjects">Projects</a>
+      <a href="#stack" data-nav="stack" data-i18n="navStack">Stack</a>
+      <a href="#cv" data-nav="cv" data-i18n="navCv">CV</a>
+      <a href="#contacto" data-nav="contacto" data-i18n="navContact">Contact</a>
     </nav>
   </header>
 
   <main id="main">
     <section class="hero snap-section" id="inicio" data-active-section aria-labelledby="hero-title">
       <div class="page-width hero__content" data-reveal>
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Desarrollador full-stack</p>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="heroRole">Full-stack Developer &amp; freelancer</span></p>
         <h1 id="hero-title">Michael<br class="hero__break"> Acosta<span class="hero__period">.</span></h1>
-        <p class="hero__statement">Creo experiencias web útiles, claras y cuidadas.</p>
-        <a class="text-link hero__link" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
+        <p class="hero__statement" data-i18n="heroStatement">I build useful, clear, thoughtfully crafted web experiences.</p>
+        <a class="text-link hero__link" href="#proyectos"><span data-i18n="heroLink">Explore projects</span><span aria-hidden="true">↓</span></a>
       </div>
-      <span class="hero__index" aria-hidden="true">PORTAFOLIO · 2026</span>
+      <svg class="pixel-flower" viewBox="0 0 32 32" shape-rendering="crispEdges" aria-hidden="true">
+        <path fill="#41a1cf" d="M12 2h8v6h6v8h-6v8h-8v-8H6V8h6z"/>
+        <path fill="#282834" d="M14 10h4v4h4v4h-4v4h-4v-4h-4v-4h4z"/>
+        <path fill="#646464" d="M14 22h4v6h-4zM10 26h4v2h-4zM18 26h4v2h-4z"/>
+      </svg>
+      <span class="hero__index" aria-hidden="true">PORTFOLIO · 2026</span>
     </section>
 
     <section class="profile snap-section" id="perfil" data-active-section aria-labelledby="profile-title">
       <div class="page-width profile__inner" data-reveal>
         <div class="profile__copy">
-          <p class="eyebrow">Un poco sobre mí</p>
-          <h2 id="profile-title">Full-stack Developer <span>&amp;</span> freelancer</h2>
-          <p>Soy Michael Acosta. Desarrollo soluciones web de frontend a backend y colaboro como freelancer en proyectos para clientes. Me importa que cada parte sea clara, útil y funcione bien en conjunto.</p>
+          <p class="eyebrow" data-i18n="profileEyebrow">A little about me</p>
+          <h2 id="profile-title"><span data-i18n="profileRole">Full-stack Developer</span> <span class="profile__connector" data-i18n="profileConjunction">&amp;</span> <span data-i18n="profileFreelancer">freelancer</span></h2>
+          <p data-i18n="profileDescription">I’m Michael Acosta. I work across frontend, backend, and data to build web solutions, and I take on client projects as a freelancer. I care about making every part clear, useful, and work well together.</p>
           <div class="profile__links">
-            <a class="text-link" href="#proyectos">Ver proyectos <span aria-hidden="true">↓</span></a>
-            <a class="text-link" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#proyectos"><span data-i18n="profileProjects">View projects</span><span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#contacto"><span data-i18n="profileContact">Get in touch</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <img class="profile__portrait" src="img/LinkedIn%20Profile%20Picture.png" alt="Retrato de Michael Acosta" width="768" height="1024" loading="lazy" decoding="async">
+        <img class="profile__portrait" src="img/LinkedIn%20Profile%20Picture.png" alt="Portrait of Michael Acosta" data-i18n-alt="portraitAlt" width="768" height="1024" loading="lazy" decoding="async">
       </div>
     </section>
 
     <section class="projects snap-section" id="proyectos" data-active-section aria-labelledby="projects-title">
       <div class="page-width">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Una selección de trabajo</p>
-          <h2 id="projects-title">Proyectos<span class="hero__period">.</span></h2>
+          <p class="eyebrow" data-i18n="projectsEyebrow">A selection of my work</p>
+          <h2 id="projects-title"><span data-i18n="projectsTitle">Projects</span><span class="hero__period">.</span></h2>
         </div>
 
         <div class="project-grid">
           <article class="project" data-reveal>
-            <a class="project__image" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir la demo de Twistora">
-              <img src="img/Twistora%20app.jpg" alt="Captura actual de Twistora con el cronómetro y el cubo 3D" width="1535" height="863" loading="lazy" decoding="async">
+            <a class="project__image" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Open the Twistora demo" data-i18n-aria-label="twistoraImageLabel">
+              <img src="img/Twistora%20app.jpg" alt="Twistora stopwatch and 3D cube simulator" data-i18n-alt="twistoraAlt" width="1535" height="863" loading="lazy" decoding="async">
               <span class="image-arrow" aria-hidden="true">↗</span>
             </a>
             <div class="project__details">
               <div>
                 <p class="project__number">01</p>
                 <h3>Twistora</h3>
-                <p class="project__description">Un cronómetro de speedcubing junto a un simulador 3D de cubo Rubik.</p>
+                <p class="project__description" data-i18n="twistoraDescription">A speedcubing timer paired with a 3D Rubik’s cube simulator.</p>
               </div>
               <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/Twistora" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MichaelAcostaDev/Twistora" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://twistora.michaelacostafreelancer.workers.dev/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
           <article class="project" data-reveal>
-            <a class="project__image" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Abrir la demo de DevWebCamp">
-              <img src="img/devwebcamp%20APP.jpg" alt="Captura actual de la página principal de DevWebCamp" width="1919" height="1079" loading="lazy" decoding="async">
+            <a class="project__image" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer" aria-label="Open the DevWebCamp demo" data-i18n-aria-label="devwebcampImageLabel">
+              <img src="img/devwebcamp%20APP.jpg" alt="DevWebCamp homepage" data-i18n-alt="devwebcampAlt" width="1919" height="1079" loading="lazy" decoding="async">
               <span class="image-arrow" aria-hidden="true">↗</span>
             </a>
             <div class="project__details">
               <div>
                 <p class="project__number">02</p>
                 <h3>DevWebCamp</h3>
-                <p class="project__description">Una plataforma PHP para organizar una conferencia de desarrollo web.</p>
+                <p class="project__description" data-i18n="devwebcampDescription">A PHP platform for organizing a web development conference.</p>
               </div>
               <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/DevWebCamp" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MichaelAcostaDev/DevWebCamp" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://devwebcamp-michaelacostadev.mnz.dom.my.id/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
           <article class="project" data-reveal>
-            <div class="project__gallery" data-gallery="interest" role="group" aria-label="Capturas de Interest Calculator">
+            <div class="project__gallery" data-gallery="interest" role="group" aria-label="Interest Calculator screenshots" data-i18n-aria-label="interestGalleryLabel">
               <div class="project__image">
-                <img data-gallery-image src="img/interest%20calculator%20APP%203.jpg" alt="Interest Calculator con el gráfico de crecimiento del saldo" width="1274" height="634" loading="lazy" decoding="async">
+                <img data-gallery-image src="img/interest%20calculator%20APP%203.jpg" alt="Interest Calculator balance growth chart" data-i18n-alt="interestAlt1" width="1274" height="634" loading="lazy" decoding="async">
               </div>
               <div class="gallery-controls">
-                <button class="gallery-button" type="button" data-gallery-previous aria-label="Ver captura anterior">←</button>
+                <button class="gallery-button" type="button" data-gallery-previous aria-label="Previous screenshot" data-i18n-aria-label="previousImage"><span aria-hidden="true">←</span></button>
                 <span class="gallery-status" data-gallery-status aria-live="polite" aria-atomic="true">01 / 04</span>
-                <button class="gallery-button" type="button" data-gallery-next aria-label="Ver captura siguiente">→</button>
+                <button class="gallery-button" type="button" data-gallery-next aria-label="Next screenshot" data-i18n-aria-label="nextImage"><span aria-hidden="true">→</span></button>
               </div>
             </div>
             <div class="project__details">
               <div>
                 <p class="project__number">03</p>
                 <h3>Interest Calculator</h3>
-                <p class="project__description">Una forma visual de explorar el interés simple y compuesto.</p>
+                <p class="project__description" data-i18n="interestDescription">A visual way to explore simple and compound interest.</p>
               </div>
               <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/Interest-Calculator" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://michaelinterestcalculator.netlify.app/" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MichaelAcostaDev/Interest-Calculator" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://michaelinterestcalculator.netlify.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
           <article class="project" data-reveal>
-            <div class="project__image project__image--unavailable" aria-label="No hay una captura disponible en el repositorio para Diabetes Predictor">
-              <span class="unavailable-label">Sin captura disponible</span>
-              <span class="unavailable-title" aria-hidden="true">Diabetes<br>Predictor</span>
-            </div>
+            <a class="project__image" href="https://ml-diabetes-predictor.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open the Diabetes Predictor demo" data-i18n-aria-label="diabetesImageLabel">
+              <img src="img/diabetes%20Predictor.jpg" alt="Diabetes Predictor project screenshot" data-i18n-alt="diabetesAlt" width="1536" height="864" loading="lazy" decoding="async">
+              <span class="image-arrow" aria-hidden="true">↗</span>
+            </a>
             <div class="project__details">
               <div>
                 <p class="project__number">04</p>
                 <h3>Diabetes Predictor</h3>
-                <p class="project__description">Una estimación informativa a partir de datos biométricos; no sustituye orientación médica.</p>
+                <p class="project__description" data-i18n="diabetesDescription">An informational estimate based on biometric data; not a substitute for medical advice.</p>
               </div>
               <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/diabetes-prediction-ml" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
-                <a class="text-link" href="https://ml-diabetes-predictor.vercel.app/" target="_blank" rel="noopener noreferrer">Demo <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MichaelAcostaDev/diabetes-prediction-ml" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://ml-diabetes-predictor.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="demoLink">Demo</span><span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
 
           <article class="project" data-reveal>
-            <div class="project__gallery" data-gallery="textforge" role="group" aria-label="Capturas de TextForge">
+            <div class="project__gallery" data-gallery="textforge" role="group" aria-label="TextForge screenshots" data-i18n-aria-label="textforgeGalleryLabel">
               <div class="project__image">
-                <img data-gallery-image src="img/textForge%20CLI%20(3).jpeg" alt="TextForge mostrando banners ASCII con distintas fuentes y colores" width="1412" height="549" loading="lazy" decoding="async">
+                <img data-gallery-image src="img/textForge%20CLI%20(3).jpeg" alt="TextForge ASCII banners in different fonts and colors" data-i18n-alt="textforgeAlt1" width="1412" height="549" loading="lazy" decoding="async">
               </div>
               <div class="gallery-controls">
-                <button class="gallery-button" type="button" data-gallery-previous aria-label="Ver captura anterior">←</button>
+                <button class="gallery-button" type="button" data-gallery-previous aria-label="Previous screenshot" data-i18n-aria-label="previousImage"><span aria-hidden="true">←</span></button>
                 <span class="gallery-status" data-gallery-status aria-live="polite" aria-atomic="true">01 / 04</span>
-                <button class="gallery-button" type="button" data-gallery-next aria-label="Ver captura siguiente">→</button>
+                <button class="gallery-button" type="button" data-gallery-next aria-label="Next screenshot" data-i18n-aria-label="nextImage"><span aria-hidden="true">→</span></button>
               </div>
             </div>
             <div class="project__details">
               <div>
                 <p class="project__number">05</p>
                 <h3>TextForge</h3>
-                <p class="project__description">Una CLI en Bash que genera banners ASCII personalizables en la terminal.</p>
+                <p class="project__description" data-i18n="textforgeDescription">A Bash CLI that generates customizable ASCII banners in the terminal.</p>
               </div>
               <div class="project__links">
-                <a class="text-link" href="https://github.com/MichaelAcostaDev/TextForge" target="_blank" rel="noopener noreferrer">Código <span aria-hidden="true">↗</span></a>
+                <a class="text-link" href="https://github.com/MichaelAcostaDev/TextForge" target="_blank" rel="noopener noreferrer"><span data-i18n="codeLink">Code</span><span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </article>
@@ -170,65 +175,54 @@
     <section class="stack-section snap-section" id="stack" data-active-section aria-labelledby="stack-title">
       <div class="page-width">
         <div class="section-heading" data-reveal>
-          <p class="eyebrow">Hecho y aprendido construyendo</p>
-          <h2 id="stack-title">Tecnologías<span class="hero__period">.</span></h2>
+          <p class="eyebrow" data-i18n="stackEyebrow">Made and learned by building</p>
+          <h2 id="stack-title"><span data-i18n="stackTitle">My ecosystem</span><span class="hero__period">.</span></h2>
         </div>
 
         <div class="stack-explorer" data-stack data-reveal>
-          <div class="stack-categories" role="tablist" aria-label="Categorías de tecnologías">
-            <button class="stack-category" type="button" role="tab" id="category-frontend" aria-controls="technology-panel" aria-selected="true" tabindex="0" data-category="frontend">Frontend</button>
-            <button class="stack-category" type="button" role="tab" id="category-backend" aria-controls="technology-panel" aria-selected="false" tabindex="-1" data-category="backend">Backend</button>
-            <button class="stack-category" type="button" role="tab" id="category-languages" aria-controls="technology-panel" aria-selected="false" tabindex="-1" data-category="languages">Lenguajes</button>
-            <button class="stack-category" type="button" role="tab" id="category-databases" aria-controls="technology-panel" aria-selected="false" tabindex="-1" data-category="databases">Bases de datos</button>
-            <button class="stack-category" type="button" role="tab" id="category-tools" aria-controls="technology-panel" aria-selected="false" tabindex="-1" data-category="tools">Herramientas y despliegue</button>
-          </div>
-
           <div class="stack-content">
-            <div class="technology-panel" id="technology-panel" role="tabpanel" aria-labelledby="category-frontend" tabindex="0">
-              <div class="technology-list" data-technology-list aria-label="Tecnologías de frontend">
-                <button class="technology" type="button" data-tech="html5" aria-pressed="true"><span class="technology__mark" aria-hidden="true">&lt;/&gt;</span><span>HTML5</span></button>
-                <button class="technology" type="button" data-tech="css3" aria-pressed="false"><span class="technology__mark" aria-hidden="true">#</span><span>CSS3</span></button>
-                <button class="technology" type="button" data-tech="threejs" aria-pressed="false"><span class="technology__mark" aria-hidden="true">3D</span><span>Three.js</span></button>
-                <button class="technology" type="button" data-tech="sass" aria-pressed="false"><span class="technology__mark" aria-hidden="true">S</span><span>Sass</span></button>
-                <button class="technology" type="button" data-tech="tailwind" aria-pressed="false"><span class="technology__mark" aria-hidden="true">~</span><span>Tailwind CSS</span></button>
-                <button class="technology" type="button" data-tech="chartjs" aria-pressed="false"><span class="technology__mark" aria-hidden="true">◔</span><span>Chart.js</span></button>
-                <button class="technology" type="button" data-tech="leaflet" aria-pressed="false"><span class="technology__mark" aria-hidden="true">⌖</span><span>Leaflet</span></button>
-              </div>
-            </div>
-
-            <aside class="technology-detail" aria-live="polite" aria-atomic="true" aria-label="Detalle de la tecnología">
-              <p class="eyebrow" data-detail-category>Frontend</p>
+            <div class="stack-groups" data-stack-groups aria-label="Technologies and skills" data-i18n-aria-label="stackGroupsLabel"></div>
+            <aside class="technology-detail" aria-live="polite" aria-atomic="true" aria-label="Selected item details" data-i18n-aria-label="stackDetailsLabel">
+              <p class="eyebrow" data-detail-group>Development</p>
               <div class="technology-detail__heading">
                 <span class="technology-detail__mark" data-detail-mark aria-hidden="true">&lt;/&gt;</span>
                 <h3 data-detail-name>HTML5</h3>
               </div>
-              <p class="technology-detail__description" data-detail-description>La estructura semántica de las interfaces web que construyo.</p>
-              <a class="text-link technology-detail__project" data-detail-project href="https://github.com/MichaelAcostaDev/Twistora" target="_blank" rel="noopener noreferrer">Explorar en Twistora <span aria-hidden="true">↗</span></a>
+              <p class="technology-detail__type" data-detail-type>Web standard</p>
+              <p class="technology-detail__description" data-detail-description>Semantic structure for web interfaces and applications.</p>
+              <a class="text-link technology-detail__project" data-detail-project href="https://github.com/MichaelAcostaDev/Twistora" target="_blank" rel="noopener noreferrer"><span data-i18n="exploreProject">Explore in Twistora</span><span aria-hidden="true">↗</span></a>
             </aside>
           </div>
-          <p class="stack-note">Una selección de herramientas aplicadas en proyectos reales, no una escala de dominio.</p>
+          <p class="stack-note" data-i18n="stackNote">A selection of technologies and skills, not a proficiency scale.</p>
         </div>
       </div>
     </section>
 
     <section class="cv-section snap-section" id="cv" data-active-section aria-labelledby="cv-title">
       <div class="page-width cv-card" data-reveal>
-        <div>
-          <p class="eyebrow">Para conocer mi recorrido</p>
-          <h2 id="cv-title">CV <span>— Coming Soon</span></h2>
+        <div class="cv-card__copy">
+          <p class="eyebrow" data-i18n="cvEyebrow">A closer look at my journey</p>
+          <h2 id="cv-title"><span data-i18n="cvTitle">A work in progress</span><span class="hero__period">.</span></h2>
+          <p class="cv-card__status" data-i18n="cvStatus">CV — Coming Soon</p>
+          <p class="cv-card__description" data-i18n="cvDescription">My resume will be available here soon.</p>
         </div>
-        <span class="cv-mark" aria-hidden="true">CV<br>…</span>
+        <svg class="cv-pixel-document" viewBox="0 0 64 72" shape-rendering="crispEdges" aria-hidden="true">
+          <path fill="#dee2de" d="M8 4h36l12 12v48H8z"/>
+          <path fill="#fff" d="M12 8h30v12h10v40H12z"/>
+          <path fill="#41a1cf" d="M42 8v12h10zM20 30h24v4H20zM20 40h24v4H20zM20 50h16v4H20z"/>
+          <path fill="#282834" d="M4 64h56v4H4zM8 60h4v4H8zM52 60h4v4h-4z"/>
+        </svg>
       </div>
     </section>
 
     <section class="contact snap-section" id="contacto" data-active-section aria-labelledby="contact-title">
       <div class="page-width contact__inner" data-reveal>
-        <p class="eyebrow">Hablemos</p>
-        <h2 id="contact-title">¿Tienes algo<br>en mente<span class="hero__period">?</span></h2>
+        <p class="eyebrow" data-i18n="contactEyebrow">Let’s talk</p>
+        <h2 id="contact-title"><span data-i18n="contactTitle">Have something<br>in mind</span><span class="hero__period">?</span></h2>
         <a class="contact__email" href="mailto:michaelacostadev@gmail.com">michaelacostadev@gmail.com <span aria-hidden="true">↗</span></a>
         <div class="contact__profiles">
-          <a class="text-link" href="https://github.com/MichaelAcostaDev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a class="text-link" href="https://www.linkedin.com/in/michael-acosta-dev/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/MichaelAcostaDev">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://www.linkedin.com/in/michael-acosta-dev/">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -236,8 +230,8 @@
 
   <footer class="site-footer">
     <div class="page-width site-footer__inner">
-      <span>Michael Acosta</span>
-      <span>© <span data-current-year>2026</span></span>
+      <span data-i18n="footerName">Michael Acosta</span>
+      <span><span data-i18n="footerCopyright">©</span> <span data-current-year>2026</span></span>
     </div>
   </footer>
 </body>
