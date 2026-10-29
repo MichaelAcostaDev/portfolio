@@ -80,6 +80,10 @@
       mascotFun2: '01001000 01101001 — that’s “Hi” in binary.',
       mascotFun3: 'No frameworks were harmed making this site.',
       mascotFun4: 'Tip: the project titles react to your cursor.',
+      mascotFun5: 'I turn coffee into commits. The bot runs on pixels.',
+      mascotFun6: 'If it compiles on my machine, it’s ready for the universe.',
+      mascotFun7: 'My favorite data structure? A well-organized portfolio.',
+      mascotFun8: '404: boring projects not found.',
       codeLink: 'Code',
       demoLink: 'Demo',
       twistoraImageLabel: 'Open the Twistora demo',
@@ -102,6 +106,13 @@
       appSalonImageLabel: 'Open the AppSalon demo',
       appSalonAlt: 'AppSalon appointment and sign-in interface',
       appSalonDescription: 'An appointment management app built with PHP and MVC.',
+      uptaskGalleryLabel: 'UpTask screenshots',
+      uptaskAlt1: 'UpTask project dashboard with a list of projects',
+      uptaskAlt2: 'UpTask sign-in screen',
+      uptaskDescription: 'A project and task manager with accounts, task status, and a PHP MVC structure.',
+      technoFestivalImageLabel: 'Open the Techno and EDM Festival demo',
+      technoFestivalAlt: 'Techno and EDM Festival landing page',
+      technoFestivalDescription: 'A responsive festival experience with artist lineups, a gallery, and ticket packages.',
       textforgeGalleryLabel: 'TextForge screenshots',
       textforgeAlt1: 'TextForge ASCII banners in different fonts and colors',
       textforgeAlt2: 'TextForge alignment and font examples',
@@ -141,8 +152,18 @@
       cvTitle: 'A work in progress',
       cvStatus: 'CV — Coming Soon',
       cvDescription: 'My resume will be available here soon.',
+      cvPreviewLabel: 'Explore selected experience',
+      cvTopicWeb: 'Web apps',
+      cvTopicData: 'Data & ML',
+      cvTopicCreative: 'Interactive',
+      cvDetailWeb: 'PHP MVC applications with authentication, project workflows, and relational databases.',
+      cvDetailData: 'Python machine-learning projects that turn health and financial data into clear estimates.',
+      cvDetailCreative: 'TypeScript interfaces, a 3D Rubik’s cube, and playful browser-based experiences.',
       contactEyebrow: 'Let’s talk',
       contactTitle: 'Have something in mind',
+      copyEmail: 'Copy email',
+      emailCopied: 'Email copied to clipboard.',
+      emailCopyFailed: 'Could not copy automatically. Please select the email address above.',
       footerName: 'Michael Acosta',
       footerCopyright: '©',
       typeWebStandard: 'Web standard',
@@ -170,7 +191,8 @@
       typeEdgePlatform: 'Edge deployment platform',
       typeContainerTool: 'Container tooling',
       typeDeploymentPlatform: 'Deployment platform',
-      typeTestRunner: 'Test runner',
+      typeMobileFramework: 'Cross-platform mobile framework',
+      typeImageProcessing: 'Image processing library',
       typeCollaborationPlatform: 'Code hosting platform',
       typeProfessionalSkill: 'Professional skill',
       typeLanguageSkill: 'Language',
@@ -239,6 +261,10 @@
       mascotFun2: '01001000 01101111 01101100 01100001 — eso es “Hola” en binario.',
       mascotFun3: 'Ningún framework fue dañado al hacer esta web.',
       mascotFun4: 'Pista: los títulos de los proyectos reaccionan al cursor.',
+      mascotFun5: 'Convierto café en commits. El bot funciona con píxeles.',
+      mascotFun6: 'Si compila en mi máquina, ya está listo para el universo.',
+      mascotFun7: '¿Mi estructura de datos favorita? Un portafolio bien organizado.',
+      mascotFun8: '404: no se encontraron proyectos aburridos.',
       codeLink: 'Código',
       demoLink: 'Demo',
       twistoraImageLabel: 'Abrir la demo de Twistora',
@@ -261,6 +287,13 @@
       appSalonImageLabel: 'Abrir la demo de AppSalon',
       appSalonAlt: 'Interfaz de acceso y citas de AppSalon',
       appSalonDescription: 'Una aplicación de gestión de citas desarrollada con PHP y MVC.',
+      uptaskGalleryLabel: 'Capturas de UpTask',
+      uptaskAlt1: 'Panel de proyectos de UpTask con una lista de proyectos',
+      uptaskAlt2: 'Pantalla de inicio de sesión de UpTask',
+      uptaskDescription: 'Un gestor de proyectos y tareas con cuentas, estados de tareas y arquitectura PHP MVC.',
+      technoFestivalImageLabel: 'Abrir la demo de Techno and EDM Festival',
+      technoFestivalAlt: 'Página de inicio de Techno and EDM Festival',
+      technoFestivalDescription: 'Una experiencia adaptable para un festival, con cartelera, galería y paquetes de entradas.',
       textforgeGalleryLabel: 'Capturas de TextForge',
       textforgeAlt1: 'Banners ASCII de TextForge con distintas fuentes y colores',
       textforgeAlt2: 'Ejemplos de alineación y fuentes de TextForge',
@@ -300,8 +333,18 @@
       cvTitle: 'En proceso',
       cvStatus: 'CV — Coming Soon',
       cvDescription: 'Mi currículum estará disponible aquí próximamente.',
+      cvPreviewLabel: 'Explora experiencia seleccionada',
+      cvTopicWeb: 'Apps web',
+      cvTopicData: 'Datos y ML',
+      cvTopicCreative: 'Interactivo',
+      cvDetailWeb: 'Aplicaciones PHP MVC con autenticación, gestión de proyectos y bases de datos relacionales.',
+      cvDetailData: 'Proyectos de aprendizaje automático con Python que convierten datos de salud y finanzas en estimaciones claras.',
+      cvDetailCreative: 'Interfaces en TypeScript, un cubo Rubik 3D y experiencias interactivas para el navegador.',
       contactEyebrow: 'Hablemos',
       contactTitle: '¿Tienes algo en mente',
+      copyEmail: 'Copiar correo',
+      emailCopied: 'Correo copiado al portapapeles.',
+      emailCopyFailed: 'No se pudo copiar automáticamente. Selecciona el correo de arriba.',
       footerName: 'Michael Acosta',
       footerCopyright: '©',
       typeWebStandard: 'Estándar web',
@@ -329,7 +372,8 @@
       typeEdgePlatform: 'Plataforma de despliegue en el edge',
       typeContainerTool: 'Herramientas de contenedores',
       typeDeploymentPlatform: 'Plataforma de despliegue',
-      typeTestRunner: 'Ejecutor de pruebas',
+      typeMobileFramework: 'Framework multiplataforma para móviles',
+      typeImageProcessing: 'Biblioteca de procesamiento de imágenes',
       typeCollaborationPlatform: 'Plataforma de alojamiento de código',
       typeProfessionalSkill: 'Habilidad profesional',
       typeLanguageSkill: 'Idioma',
@@ -365,6 +409,9 @@
     { id: 'php', name: 'PHP', mark: 'php', group: 'development', typeKey: 'typeBackendLanguage' },
     { id: 'flask', name: 'Flask', mark: 'f', group: 'development', typeKey: 'typeWebFramework' },
     { id: 'scikit-learn', name: 'Scikit-learn', mark: 'sk', group: 'development', typeKey: 'typeMlLibrary' },
+    { id: 'ruby', name: 'Ruby', mark: 'rb', group: 'development', typeKey: 'typeProgrammingLanguage' },
+    { id: 'sinatra', name: 'Sinatra', mark: 'S', group: 'development', typeKey: 'typeWebFramework' },
+    { id: 'react-native', name: 'React Native', mark: 'RN', group: 'development', typeKey: 'typeMobileFramework' },
     { id: 'typescript', name: 'TypeScript', mark: 'TS', group: 'development', typeKey: 'typeProgrammingLanguage' },
     { id: 'javascript', name: 'JavaScript', mark: 'JS', group: 'development', typeKey: 'typeProgrammingLanguage' },
     { id: 'python', name: 'Python', mark: 'Py', group: 'development', typeKey: 'typeProgrammingLanguage' },
@@ -395,7 +442,8 @@
     { id: 'cloudflare', name: 'Cloudflare Workers', mark: '↗', group: 'tools', typeKey: 'typeEdgePlatform' },
     { id: 'docker', name: 'Docker', mark: '▰', group: 'tools', typeKey: 'typeContainerTool' },
     { id: 'vercel', name: 'Vercel', mark: '▲', group: 'tools', typeKey: 'typeDeploymentPlatform' },
-    { id: 'vitest', name: 'Vitest', mark: 'V', group: 'tools', typeKey: 'typeTestRunner' },
+    { id: 'sharp', name: 'Sharp', mark: '◈', group: 'tools', typeKey: 'typeImageProcessing' },
+    { id: 'wasmer', name: 'Wasmer', mark: 'W', group: 'tools', typeKey: 'typeDeploymentPlatform' },
     { id: 'teamwork', name: 'Teamwork', labelKey: 'skillTeamwork', mark: 'T', group: 'skills', typeKey: 'typeProfessionalSkill' },
     { id: 'collaboration', name: 'Collaboration & communication', labelKey: 'skillCollaboration', mark: '↔', group: 'skills', typeKey: 'typeProfessionalSkill' },
     { id: 'problem-solving', name: 'Problem-solving', labelKey: 'skillProblemSolving', mark: '◎', group: 'skills', typeKey: 'typeProfessionalSkill' },
@@ -418,6 +466,9 @@
     php: "<?php\n$project = 'portfolio';\necho $project;",
     flask: "@app.get('/')\ndef home():\n    return 'Portfolio'",
     'scikit-learn': 'model = LogisticRegression()\nmodel.fit(features, labels)',
+    ruby: "projects = ['UpTask', 'Festival']\nputs projects.join(', ')",
+    sinatra: "get '/' do\n  'Welcome to my portfolio'\nend",
+    'react-native': 'const ColorCard = ({ color }) => (\n  <View style={{ backgroundColor: color }} />\n);',
     typescript: 'type Project = { name: string };\nconst projects: Project[] = [];',
     javascript: "const projects = ['web', 'games'];",
     python: "def build_portfolio():\n    return 'Michael Acosta'",
@@ -448,7 +499,8 @@
     cloudflare: "export default {\n  fetch() {\n    return new Response('Hello');\n  }\n};",
     docker: 'docker build -t portfolio .',
     vercel: 'vercel --prod',
-    vitest: "import { test, expect } from 'vitest';\ntest('works', () => expect(true).toBe(true));",
+    sharp: "sharp('festival.jpg')\n  .resize(800)\n  .webp()\n  .toFile('festival.webp');",
+    wasmer: 'wasmer deploy',
     teamwork: '// Share context. Build together.',
     collaboration: "const feedback = { open: true };",
     'problem-solving': 'const nextStep = problems.find(Boolean);',
@@ -472,6 +524,10 @@
       { src: 'img/textForge%20CLI%20(4).jpeg', altKey: 'textforgeAlt2', width: 996, height: 396 },
       { src: 'img/textForge%20CLI%20(1).jpeg', altKey: 'textforgeAlt3', width: 614, height: 751 },
       { src: 'img/textForge%20CLI%20(2).jpeg', altKey: 'textforgeAlt4', width: 658, height: 593 }
+    ],
+    uptask: [
+      { src: 'img/upTask-dashboard.jpg', altKey: 'uptaskAlt1', width: 1919, height: 1079 },
+      { src: 'img/upTask-login.jpg', altKey: 'uptaskAlt2', width: 1919, height: 1079 }
     ]
   };
 
@@ -678,14 +734,16 @@
       if (item.group === 'data') return 'sql';
       if (item.id === 'windows11') return 'ps1';
       if (item.id === 'windows7') return 'bat';
-      if (item.group === 'os' || item.id === 'bash' || item.id === 'git' || item.id === 'github' || item.id === 'composer' || item.id === 'npm' || item.id === 'docker' || item.id === 'vercel') return 'sh';
+      if (item.group === 'os' || item.id === 'bash' || item.id === 'git' || item.id === 'github' || item.id === 'composer' || item.id === 'npm' || item.id === 'docker' || item.id === 'vercel' || item.id === 'wasmer') return 'sh';
       if (item.group === 'skills') return 'md';
       if (item.id === 'html5') return 'html';
       if (item.id === 'css3' || item.id === 'sass' || item.id === 'tailwind') return 'css';
       if (item.id === 'php') return 'php';
       if (item.id === 'python' || item.id === 'flask' || item.id === 'scikit-learn') return 'py';
+      if (item.id === 'ruby' || item.id === 'sinatra') return 'rb';
+      if (item.id === 'react-native') return 'tsx';
       if (item.id === 'typescript') return 'ts';
-      if (item.id === 'gulp' || item.id === 'cloudflare' || item.id === 'vitest') return 'js';
+      if (item.id === 'gulp' || item.id === 'cloudflare' || item.id === 'sharp') return 'js';
       return 'js';
     };
 
@@ -1089,6 +1147,44 @@
     update();
   }
 
+  function initializeCvPreview(): void {
+    const preview = document.querySelector<HTMLElement>('[data-cv-preview]');
+    const detail = preview?.querySelector<HTMLElement>('[data-cv-detail]');
+    if (!preview || !detail) return;
+
+    const detailKeys: Record<string, string> = {
+      web: 'cvDetailWeb',
+      data: 'cvDetailData',
+      creative: 'cvDetailCreative'
+    };
+
+    preview.querySelectorAll<HTMLButtonElement>('[data-cv-topic]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const detailKey = detailKeys[button.dataset.cvTopic ?? ''];
+        if (!detailKey) throw new Error(`Unknown CV preview topic: ${button.dataset.cvTopic}`);
+        detail.textContent = translate(detailKey);
+        preview.querySelectorAll<HTMLButtonElement>('[data-cv-topic]').forEach((topic) => {
+          topic.setAttribute('aria-pressed', String(topic === button));
+        });
+      });
+    });
+  }
+
+  function initializeContact(): void {
+    const button = document.querySelector<HTMLButtonElement>('[data-copy-email]');
+    const status = document.querySelector<HTMLElement>('[data-copy-status]');
+    if (!button || !status) return;
+
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('michaelacostadev@gmail.com');
+        status.textContent = translate('emailCopied');
+      } catch {
+        status.textContent = translate('emailCopyFailed');
+      }
+    });
+  }
+
   function initializeMascot(): void {
     const mascot = document.querySelector<HTMLElement>('[data-mascot]');
     const bubble = mascot?.querySelector<HTMLElement>('[data-mascot-bubble]');
@@ -1104,7 +1200,7 @@
       cv: 'mascotCv',
       contacto: 'mascotContact'
     };
-    const funMessages = ['mascotFun1', 'mascotFun2', 'mascotFun3', 'mascotFun4'];
+    const funMessages = ['mascotFun1', 'mascotFun2', 'mascotFun3', 'mascotFun4', 'mascotFun5', 'mascotFun6', 'mascotFun7', 'mascotFun8'];
     let typingTimer = 0;
     let hideTimer = 0;
     let funIndex = 0;
@@ -1194,5 +1290,7 @@
   initializeTilt();
   initializeHeroParallax();
   initializeScrollProgress();
+  initializeCvPreview();
+  initializeContact();
   initializeMascot();
 })();
